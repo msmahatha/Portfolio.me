@@ -8,6 +8,8 @@ import { profileData } from '@/data/profileData';
 import { SidebarHeader, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
 import { Separator } from '@/components/ui/separator';
 import { usePathname } from 'next/navigation';
+// Tooltip components are not explicitly used here based on refined plan, but could be for richer tooltips
+// import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const navItems = [
   { href: '/profile-enhancer', label: 'AI Profile Enhancer', icon: Briefcase },
@@ -39,19 +41,33 @@ export default function SidebarNav() {
           <SidebarGroupLabel>Contact</SidebarGroupLabel>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center">
-              <Mail className="w-4 h-4 mr-2 text-accent" />
-              <a href={`mailto:${profileData.email}`} className="hover:text-accent transition-colors group-data-[state=collapsed]:hidden">{profileData.email}</a>
-              <span className="hidden group-data-[state=collapsed]:inline">Email</span>
+              <a 
+                href={`mailto:${profileData.email}`} 
+                className="flex items-center hover:text-accent transition-colors w-full overflow-hidden"
+                title={profileData.email}
+              >
+                <Mail className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
+                <span className="group-data-[state=collapsed]:hidden truncate"> 
+                  {profileData.email}
+                </span>
+                <span className="hidden group-data-[state=collapsed]:inline">
+                  Email
+                </span>
+              </a>
             </li>
             <li className="flex items-center">
-              <Phone className="w-4 h-4 mr-2 text-accent" />
-              <span className="group-data-[state=collapsed]:hidden">{profileData.phone}</span>
-              <span className="hidden group-data-[state=collapsed]:inline">Phone</span>
+              <Phone className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
+               <a href={`tel:${profileData.phone.replace(/\s+/g, '')}`} 
+                  className="group-data-[state=collapsed]:hidden hover:text-accent transition-colors truncate" 
+                  title={profileData.phone}>
+                  {profileData.phone}
+                </a>
+              <span className="hidden group-data-[state=collapsed]:inline" title={profileData.phone}>Phone</span>
             </li>
             <li className="flex items-center">
-              <MapPin className="w-4 h-4 mr-2 text-accent" />
-              <span className="group-data-[state=collapsed]:hidden">{profileData.location}</span>
-               <span className="hidden group-data-[state=collapsed]:inline">Location</span>
+              <MapPin className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
+              <span className="group-data-[state=collapsed]:hidden truncate" title={profileData.location}>{profileData.location}</span>
+               <span className="hidden group-data-[state=collapsed]:inline" title={profileData.location}>Location</span>
             </li>
           </ul>
         </SidebarGroup>
@@ -61,10 +77,10 @@ export default function SidebarNav() {
         <SidebarGroup>
           <SidebarGroupLabel>Social</SidebarGroupLabel>
           <div className="flex space-x-3 group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-x-0 group-data-[state=collapsed]:space-y-3 group-data-[state=collapsed]:items-center">
-            <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
-            <Link href={profileData.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href={profileData.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <Linkedin className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
           </div>
