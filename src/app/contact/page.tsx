@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react'; // Added React import for useEffect
 import { useFormState, useFormStatus } from 'react-dom';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -11,8 +12,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Terminal, CheckCircle, AlertCircle } from 'lucide-react';
-import { submitContactForm, contactFormSchema, type ContactFormState } from './actions';
+import { CheckCircle, AlertCircle } from 'lucide-react'; // Removed unused Terminal import
+import { submitContactForm, type ContactFormState } from './actions';
+import { contactFormSchema } from './formSchema'; // Updated import path
 
 function SubmitButton() {
   const { pending } = useFormStatus();
