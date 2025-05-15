@@ -67,7 +67,7 @@ export const profileData: ProfileData = {
         "Locally deployed multimodal comic generator with real-time editing.",
         "Optimised for Intel-based edge devices, reducing latency by 35%."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21pY2Jvb2t8ZW58MHx8fHwxNzQ3MjkxOTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "comic art"
     }
   ],
