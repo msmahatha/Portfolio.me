@@ -13,8 +13,8 @@ export const profileData: ProfileData = {
   whatIDo: [
     { icon: "pencil",  title: "Web Design",   text: "Crafting clean, cutting-edge UI/UX with professional expertise." },
     { icon: "code",    title: "Web Development", text: "Building high-quality, scalable websites & APIs." },
-    { icon: "smartphone", title: "Mobile Apps", text: "Developing seamless cross-platform mobile experiences." },
-    { icon: "camera",  title: "Hackathons / Workshops", text: "Organising events that empower peers to innovate." }
+    { icon: "cpu", title: "Automations", text: "Developing intelligent automation solutions to streamline processes and enhance efficiency." },
+    { icon: "briefcase",  title: "Real World Solutions", text: "Architecting practical and impactful solutions for complex real-world challenges." }
   ],
   education: [
     {
