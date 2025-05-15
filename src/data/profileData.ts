@@ -45,7 +45,7 @@ export const profileData: ProfileData = {
         "Built LSTM model predicting groundwater levels with 85% accuracy.",
         "Integrated crop-recommendation module for water-table sustainability."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1677907564161-7279d5aac75f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3JvdW5kd2F0ZXJ8ZW58MHx8fHwxNzQ3Mjg5OTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "water data"
     },
     {
@@ -56,7 +56,7 @@ export const profileData: ProfileData = {
         "Recommends movies using mood, weather, trends & socio-political data with 90% accuracy.",
         "Delivered dynamic filtering algorithms & interactive Flask UI."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3ZpZSUyMHJlY29tbWVuZGF0aW9ufGVufDB8fHx8MTc0NzI4OTYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "movie cinema"
     },
     {
