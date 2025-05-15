@@ -1,10 +1,11 @@
+
 "use client";
 
-import React from 'react'; // Added React import for useEffect
-import { useFormState, useFormStatus } from 'react-dom';
+import React from 'react'; // Added React import for useEffect and useActionState
+import { useFormStatus } from 'react-dom'; // useFormState removed from here
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import type { z } from "zod";
 
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import { Button } from '@/components/ui/button';
@@ -12,9 +13,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { CheckCircle, AlertCircle } from 'lucide-react'; // Removed unused Terminal import
+import { CheckCircle, AlertCircle } from 'lucide-react';
 import { submitContactForm, type ContactFormState } from './actions';
-import { contactFormSchema } from './formSchema'; // Updated import path
+import { contactFormSchema } from './formSchema';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -27,7 +28,8 @@ function SubmitButton() {
 
 export default function ContactPage() {
   const initialState: ContactFormState = { message: '', status: 'idle' };
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  // Updated to use React.useActionState
+  const [state, formAction] = React.useActionState(submitContactForm, initialState);
 
   // react-hook-form for client-side validation (optional, but good UX)
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -63,9 +65,20 @@ export default function ContactPage() {
       )}
 
       <form
-        action={formAction}
-        // For client-side validation with react-hook-form
-        onSubmit={form.handleSubmit(() => formAction(new FormData(form.control._formValuesRef.current)))}
+        // The formAction prop on the form element is the standard way to use useActionState
+        // no need for form.handleSubmit wrapper if we are only using server action for submission
+        // however, to keep client-side validation with react-hook-form before server action,
+        // we use form.handleSubmit to trigger client validation first, 
+        // and if successful, it will call the function passed to it, which then calls our formAction.
+        onSubmit={form.handleSubmit(() => {
+          // Create FormData from react-hook-form's current values
+          const formData = new FormData();
+          const values = form.getValues();
+          (Object.keys(values) as Array<keyof typeof values>).forEach((key) => {
+            formData.append(key, values[key]);
+          });
+          formAction(formData);
+        })}
         className="space-y-6"
       >
         <div>
@@ -79,7 +92,7 @@ export default function ContactPage() {
           {form.formState.errors.name && (
             <p className="text-sm text-destructive mt-1">{form.formState.errors.name.message}</p>
           )}
-           {state.errors?.name && (
+           {state.errors?.name && !form.formState.errors.name && ( // Show server error if no client error
             <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>
           )}
         </div>
@@ -96,7 +109,7 @@ export default function ContactPage() {
           {form.formState.errors.email && (
             <p className="text-sm text-destructive mt-1">{form.formState.errors.email.message}</p>
           )}
-          {state.errors?.email && (
+          {state.errors?.email && !form.formState.errors.email && ( // Show server error if no client error
             <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>
           )}
         </div>
@@ -113,7 +126,7 @@ export default function ContactPage() {
           {form.formState.errors.message && (
             <p className="text-sm text-destructive mt-1">{form.formState.errors.message.message}</p>
           )}
-           {state.errors?.message && (
+           {state.errors?.message && !form.formState.errors.message && ( // Show server error if no client error
             <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>
           )}
         </div>
