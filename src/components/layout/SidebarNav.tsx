@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -17,17 +18,18 @@ export default function SidebarNav() {
   const pathname = usePathname();
   return (
     <>
-      <SidebarHeader className="items-center text-center p-6">
-        <Image
-          src="https://storage.googleapis.com/aiteacher/Project%20Master/image_1724090389959_0.png"
-          alt={profileData.name}
-          width={140}
-          height={140}
-          className="rounded-full mb-4 shadow-md object-cover"
-          data-ai-hint="man portrait"
-        />
-        <h1 className="text-xl font-semibold text-foreground">{profileData.name}</h1>
-        <p className="text-xs bg-secondary text-secondary-foreground rounded-full px-3 py-1 mt-1 inline-block">
+      <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-1.5 group-data-[state=collapsed]:py-4 transition-all duration-200">
+        <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-9 group-data-[state=collapsed]:h-9 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-200">
+          <Image
+            src="https://storage.googleapis.com/aiteacher/Project%20Master/image_1724090389959_0.png"
+            alt={profileData.name}
+            layout="fill"
+            objectFit="cover"
+            data-ai-hint="man portrait"
+          />
+        </div>
+        <h1 className="text-xl font-semibold text-foreground group-data-[state=collapsed]:hidden">{profileData.name}</h1>
+        <p className="text-xs bg-secondary text-secondary-foreground rounded-full px-3 py-1 mt-1 inline-block group-data-[state=collapsed]:hidden">
           {profileData.title}
         </p>
       </SidebarHeader>
@@ -38,15 +40,18 @@ export default function SidebarNav() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center">
               <Mail className="w-4 h-4 mr-2 text-accent" />
-              <a href={`mailto:${profileData.email}`} className="hover:text-accent transition-colors">{profileData.email}</a>
+              <a href={`mailto:${profileData.email}`} className="hover:text-accent transition-colors group-data-[state=collapsed]:hidden">{profileData.email}</a>
+              <span className="hidden group-data-[state=collapsed]:inline">Email</span>
             </li>
             <li className="flex items-center">
               <Phone className="w-4 h-4 mr-2 text-accent" />
-              <span>{profileData.phone}</span>
+              <span className="group-data-[state=collapsed]:hidden">{profileData.phone}</span>
+              <span className="hidden group-data-[state=collapsed]:inline">Phone</span>
             </li>
             <li className="flex items-center">
               <MapPin className="w-4 h-4 mr-2 text-accent" />
-              <span>{profileData.location}</span>
+              <span className="group-data-[state=collapsed]:hidden">{profileData.location}</span>
+               <span className="hidden group-data-[state=collapsed]:inline">Location</span>
             </li>
           </ul>
         </SidebarGroup>
@@ -55,7 +60,7 @@ export default function SidebarNav() {
 
         <SidebarGroup>
           <SidebarGroupLabel>Social</SidebarGroupLabel>
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-x-0 group-data-[state=collapsed]:space-y-3 group-data-[state=collapsed]:items-center">
             <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
@@ -73,9 +78,13 @@ export default function SidebarNav() {
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.label}>
                   <Link href={item.href} passHref legacyBehavior>
-                    <SidebarMenuButton isActive={pathname === item.href} className="w-full">
-                      <item.icon className="w-4 h-4 mr-2" />
-                      {item.label}
+                    <SidebarMenuButton 
+                      isActive={pathname === item.href} 
+                      className="w-full"
+                      tooltip={{ children: item.label, side: 'right', align: 'center' }}
+                    >
+                      <item.icon className="w-4 h-4 mr-2 group-data-[state=collapsed]:mr-0" />
+                      <span className="group-data-[state=collapsed]:hidden">{item.label}</span>
                     </SidebarMenuButton>
                   </Link>
                 </SidebarMenuItem>
