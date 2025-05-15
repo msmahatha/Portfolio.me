@@ -46,7 +46,9 @@ export interface ProfileData {
   education: EducationItem[];
   work: WorkItem[];
   projects: ProjectItem[];
-  skills: string[];
+  skills: {
+    [category: string]: string[];
+  };
   certifications: string[];
   extras: string[];
   social: SocialLinks;

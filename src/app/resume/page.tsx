@@ -1,3 +1,4 @@
+
 import { profileData } from '@/data/profileData';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import TimelineItem from '@/components/shared/TimelineItem';
@@ -56,9 +57,16 @@ export default function ResumePage() {
         {/* Skills */}
         <div className="mb-10">
           <h3 className="text-2xl font-semibold mb-4 text-accent">Skills</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <SkillBadge key={skill} skill={skill} />
+          <div className="space-y-4">
+            {Object.entries(skills).map(([category, skillList]) => (
+              <div key={category}>
+                <h4 className="text-lg font-semibold mb-2 text-foreground/90">{category}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {skillList.map((skill) => (
+                    <SkillBadge key={skill} skill={skill} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
