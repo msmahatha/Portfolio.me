@@ -1,0 +1,53 @@
+
+export interface SocialLinks {
+  github: string;
+  linkedin: string;
+}
+
+export interface WhatIDoItem {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+export interface EducationItem {
+  degree: string;
+  period: string;
+  details: string[];
+}
+
+export interface WorkItem {
+  role: string;
+  company: string;
+  period: string;
+  bullets: string[];
+}
+
+export interface ProjectItem {
+  name: string;
+  period: string;
+  tech: string;
+  highlights: string[];
+  image?: string; // Optional image for portfolio
+  dataAiHint?: string; // Optional AI hint for placeholder image
+}
+
+export interface ProfileData {
+  name: string;
+  title: string;
+  email: string;
+  phone: string;
+  location: string;
+  about: {
+    paragraph1: string;
+    paragraph2: string;
+  };
+  whatIDo: WhatIDoItem[];
+  education: EducationItem[];
+  work: WorkItem[];
+  projects: ProjectItem[];
+  skills: string[];
+  certifications: string[];
+  extras: string[];
+  social: SocialLinks;
+}
