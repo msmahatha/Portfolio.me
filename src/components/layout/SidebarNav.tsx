@@ -19,12 +19,12 @@ export default function SidebarNav() {
     <>
       <SidebarHeader className="items-center text-center p-6">
         <Image
-          src="https://placehold.co/140x140.png"
+          src="https://storage.googleapis.com/aiteacher/Project%20Master/image_1724090389959_0.png"
           alt={profileData.name}
           width={140}
           height={140}
-          className="rounded-full mb-4 shadow-md"
-          data-ai-hint="profile person"
+          className="rounded-full mb-4 shadow-md object-cover"
+          data-ai-hint="man portrait"
         />
         <h1 className="text-xl font-semibold text-foreground">{profileData.name}</h1>
         <p className="text-xs bg-secondary text-secondary-foreground rounded-full px-3 py-1 mt-1 inline-block">
