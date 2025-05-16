@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -8,7 +9,7 @@ const navItems = [
   { href: '/about', label: 'About', icon: Home },
   { href: '/resume', label: 'Resume', icon: FileText },
   { href: '/portfolio', label: 'Portfolio', icon: Briefcase },
-  { href: '/contact', label: 'Contact', icon: Send },
+  // { href: '/contact', label: 'Contact', icon: Send }, // Removed contact link
 ];
 
 export default function MobileBottomNav() {

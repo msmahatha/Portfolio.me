@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/resume', label: 'Resume' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/contact', label: 'Contact' },
+  // { href: '/contact', label: 'Contact' }, // Removed contact link
 ];
 
 export default function HeaderNav() {
