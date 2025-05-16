@@ -1,4 +1,4 @@
-# **App Name**: PortfolioPilot
+# **App Name**: 
 
 ## Core Features:
 

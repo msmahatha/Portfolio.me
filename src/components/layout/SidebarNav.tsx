@@ -12,7 +12,7 @@ import { usePathname } from 'next/navigation';
 // import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 
 const navItems = [
-  { href: '/profile-enhancer', label: 'AI Profile Enhancer', icon: Briefcase },
+  { href: '/profile-enhancer', label: 'AI Enhancer', icon: Briefcase },
 ];
 
 
