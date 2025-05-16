@@ -107,7 +107,6 @@ export const profileData: ProfileData = {
     "Organiser, Texibition – Annual Tech Fest (2024) – boosted turnout by 30%.",
     "Organiser, Chess Tournament (2023) – managed 200+ participants.",
     "Languages: English, Hindi, Bengali",
-    "Coding Profiles: LeetCode, GeeksforGeeks"
   ],
   social: {
     github: "https://github.com/msmahatha",
