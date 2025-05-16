@@ -81,6 +81,18 @@ export const profileData: ProfileData = {
       ],
       image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8c2Nob29sJTIwYXR0ZW5kZW5jZXxlbnwwfHx8fDE3NDczNzA1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "face recognition"
+    },
+    {
+      name: "AI Text Summarizer",
+      period: "Dec 2023 – Jan 2024",
+      tech: "Python, NLTK, spaCy, Transformers, Flask",
+      highlights: [
+        "Developed an extractive and abstractive text summarization tool.",
+        "Achieved a ROUGE score of 0.45 on benchmark datasets.",
+        "Deployed as a simple web service using Flask."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "text summary"
     }
   ],
   skills: {
