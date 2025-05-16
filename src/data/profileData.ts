@@ -91,7 +91,7 @@ export const profileData: ProfileData = {
         "Achieved a ROUGE score of 0.45 on benchmark datasets.",
         "Deployed as a simple web service using Flask."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8MTc0NzM3MjE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "text summary"
     }
   ],
