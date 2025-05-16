@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -25,7 +26,7 @@ export default function HeaderNav() {
           </div>
           <Link href="/about" className="flex items-center space-x-2">
             <Flame className="h-6 w-6 text-accent" />
-            <span className="font-bold text-lg">PortfolioPilot</span>
+            <span className="font-bold text-lg">Msmahatha</span>
           </Link>
         </div>
 
