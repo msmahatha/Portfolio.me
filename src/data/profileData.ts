@@ -69,6 +69,18 @@ export const profileData: ProfileData = {
       ],
       image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21pY2Jvb2t8ZW58MHx8fHwxNzQ3MjkxOTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "comic art"
+    },
+    {
+      name: "Facial Recognition Attendance System",
+      period: "Jan 2024 – Feb 2024",
+      tech: "Python, OpenCV, Dlib, Flask, SQLite",
+      highlights: [
+        "Developed a system to automate attendance tracking using facial recognition.",
+        "Achieved 95% accuracy in identifying individuals in varied lighting conditions.",
+        "Integrated a web interface for real-time attendance monitoring and report generation."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "face recognition"
     }
   ],
   skills: {
