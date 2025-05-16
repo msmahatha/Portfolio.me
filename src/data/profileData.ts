@@ -79,7 +79,7 @@ export const profileData: ProfileData = {
         "Achieved 95% accuracy in identifying individuals in varied lighting conditions.",
         "Integrated a web interface for real-time attendance monitoring and report generation."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8c2Nob29sJTIwYXR0ZW5kZW5jZXxlbnwwfHx8fDE3NDczNzA1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "face recognition"
     }
   ],
