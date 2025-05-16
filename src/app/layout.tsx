@@ -10,7 +10,7 @@ const geistSans = Geist({ // Using default Geist (sans-serif)
 
 
 export const metadata: Metadata = {
-  title: 'PortfolioPilot - Madhusudan Mahatha',
+  title: 'Madhusudan Mahatha',
   description: 'Personal portfolio of Madhusudan Mahatha, Full Stack Developer & AI/ML Specialist.',
 };
 
