@@ -110,7 +110,7 @@ export const profileData: ProfileData = {
     "Coding Profiles: LeetCode, GeeksforGeeks"
   ],
   social: {
-    github: "https://github.com/MadhusudanMahatha",
-    linkedin: "https://www.linkedin.com/in/madhusudan-mahatha"
+    github: "https://github.com/msmahatha",
+    linkedin: "https://www.linkedin.com/in/msmahatha"
   }
 };
