@@ -1,2 +1,7 @@
-// This file is intentionally left blank as it is being deleted.
-// If you see this, the deletion was successful.
+import { notFound } from 'next/navigation';
+
+export default function ContactPage() {
+  notFound();
+  // This line is technically unreachable as notFound() throws an error.
+  return null;
+}

@@ -1,2 +1,1 @@
-// This file is intentionally left blank as it is being deleted.
-// If you see this, the deletion was successful.
+// This file is intentionally left empty as the contact page has been removed.
