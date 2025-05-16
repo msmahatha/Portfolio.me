@@ -97,7 +97,7 @@ export const profileData: ProfileData = {
   ],
   skills: {
     "Programming Languages": ["Python", "Java", "JavaScript", "SQL"],
-    "Frameworks & Libraries": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "Flask", "Streamlit"],
+    "Frameworks & Libraries": ["Next.js", "React", "Node.js", "Flask", "Streamlit"],
     "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral", "Langchain"],
     "Databases": ["MongoDB", "PostgreSQL", "Firebase Firestore"],
     "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git", "CI/CD", "Jenkins"]
