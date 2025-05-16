@@ -43,7 +43,12 @@ const TypingEffect: FC<TypingEffectProps> = ({ text, speed = 100 }) => {
 
   // Render a non-breaking space if displayedText is empty to give some initial content
   // to the parent h2, ensuring it has some height for layout consistency.
-  return <>{displayedText || <span aria-hidden="true">&nbsp;</span>}</>;
+  return (
+    <>
+      {displayedText || <span aria-hidden="true">&nbsp;</span>}
+      <span className="typing-cursor-char" aria-hidden="true">|</span>
+    </>
+  );
 };
 
 export default TypingEffect;

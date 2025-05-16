@@ -69,3 +69,23 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* GitHub-style typing cursor animation */
+.typing-cursor-char {
+  font-weight: normal; /* Adjust if pipe char is too thin with current font */
+  color: hsl(var(--accent)); /* Use theme's accent color */
+  animation: blink-cursor 1s step-end infinite;
+  margin-left: 1px; /* Small space after the text */
+  line-height: inherit; /* Inherit line height from parent */
+  display: inline; /* Allow it to flow with the text */
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
