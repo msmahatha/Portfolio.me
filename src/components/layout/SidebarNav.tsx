@@ -23,11 +23,11 @@ export default function SidebarNav() {
       <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-1.5 group-data-[state=collapsed]:py-4 transition-all duration-200">
         <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-9 group-data-[state=collapsed]:h-9 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-200">
           <Image
-            src="https://placehold.co/140x140.png"
+            src="https://i.ibb.co/CFGFw2x/Whats-App-Image-2025-03-08-at-22-15-53.jpg"
             alt={profileData.name}
             layout="fill"
             objectFit="cover"
-            data-ai-hint="man chess"
+            data-ai-hint="man profile"
           />
         </div>
         <h1 className="text-xl font-semibold text-foreground group-data-[state=collapsed]:hidden">{profileData.name}</h1>
