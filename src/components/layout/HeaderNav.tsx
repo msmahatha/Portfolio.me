@@ -7,7 +7,7 @@ import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { Flame } from 'lucide-react'; // Using Flame as a placeholder logo
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react'; // Added
+import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -43,20 +43,22 @@ export default function HeaderNav() {
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           {navLinks.map((link) => {
-            // Determine isActive only on the client after mount, or use a default for SSR/initial client render
-            const isActive = isClient ? pathname === link.href : false;
+            // isActive is determined only on the client after mount.
+            // For SSR and initial client render, isActive will effectively be false.
+            const isActive = isClient && pathname === link.href;
 
             return (
               <Button
                 key={link.href}
-                variant={isActive ? 'secondary' : 'ghost'}
+                // The 'variant' prop is kept consistent for SSR and initial client render
+                // to prevent cva from generating different base classes.
+                variant="ghost"
                 asChild
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  // If active, rely on 'secondary' variant for text color (text-secondary-foreground).
-                  // If inactive, set base text to muted-foreground.
-                  // Hover styles will be handled by the respective variants.
-                  isActive ? "" : "text-muted-foreground"
+                  isActive
+                    ? "bg-secondary text-secondary-foreground hover:bg-secondary/80" // Mimics 'secondary' variant styles for active link
+                    : "text-muted-foreground" // Default for inactive 'ghost' links. Hover styles from 'ghost' variant.
                 )}
               >
                 <Link href={link.href}>{link.label}</Link>
