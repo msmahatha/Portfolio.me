@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { Flame } from 'lucide-react'; // Using Flame as a placeholder logo
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -36,16 +37,25 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {navLinks.map((link) => (
-            <Button
-              key={link.href}
-              variant={pathname === link.href ? 'secondary' : 'ghost'}
-              asChild
-              className={`text-sm font-medium transition-colors hover:text-accent ${pathname === link.href ? 'text-accent' : 'text-muted-foreground'}`}
-            >
-              <Link href={link.href}>{link.label}</Link>
-            </Button>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Button
+                key={link.href}
+                variant={isActive ? 'secondary' : 'ghost'}
+                asChild
+                className={cn(
+                  "text-sm font-medium transition-colors",
+                  // If active, rely on 'secondary' variant for text color (text-secondary-foreground).
+                  // If inactive, set base text to muted-foreground.
+                  // Hover styles will be handled by the respective variants.
+                  isActive ? "" : "text-muted-foreground"
+                )}
+              >
+                <Link href={link.href}>{link.label}</Link>
+              </Button>
+            );
+          })}
         </nav>
       </div>
     </header>
