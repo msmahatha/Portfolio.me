@@ -109,14 +109,16 @@ body {
   transform: translate(-50%, -50%); /* Center the icon on the cursor tip */
   pointer-events: none; /* Allows clicking through the cursor */
   z-index: 9999; /* Ensure it's on top */
-  padding: 6px;
-  background-color: hsla(var(--background), 0.5);
+  padding: 6px; /* Padding around the icon */
+  /* background-color: hsla(var(--background), 0); Removed background color for clarity */
+  /* backdrop-filter: blur(0px); Removed blur effect */
   border-radius: 50%;
-  backdrop-filter: blur(3px);
-  border: 1px solid hsla(var(--border), 0.7);
+  border: 1px solid hsla(var(--border), 0.7); /* Keep a subtle border for the "lens" effect */
   transition: opacity 0.2s ease-in-out, transform 0.05s linear; /* Smooth movement and visibility */
   will-change: transform; /* Performance hint for transform */
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 32px; /* Explicit size for the cursor area */
+  height: 32px; /* Explicit size for the cursor area */
 }
