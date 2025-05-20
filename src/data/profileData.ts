@@ -105,19 +105,33 @@ export const profileData: ProfileData = {
       ],
       image: "https://placehold.co/600x400.png",
       dataAiHint: "file sharing"
+    },
+    {
+      name: "TruthGuard - Fact Checking Website",
+      period: "Jan 2025 – Feb 2025",
+      tech: "Next.js, Genkit (Gemini), Firebase, Tailwind CSS, TypeScript",
+      highlights: [
+        "Developed an AI-powered fact-checking website to combat misinformation.",
+        "Utilized Genkit with Gemini for natural language processing and claim verification.",
+        "Achieved 80% accuracy in identifying misleading content from various sources.",
+        "Implemented a user-friendly interface for submitting claims and viewing results."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "fact check"
     }
   ],
   skills: {
     "Programming Languages": ["Python", "Java", "JavaScript", "SQL"],
     "Frameworks & Libraries": ["Next.js", "React", "Node.js", "Flask", "Streamlit"],
-    "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral"],
-    "Databases": ["MongoDB"],
+    "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral", "Genkit"],
+    "Databases": ["MongoDB", "SQLite"],
     "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git", "CI/CD", "Jenkins"]
   },
   certifications: ["Intel Unnati Training 2025"],
   extras: [
     "Organiser, Texibition – Annual Tech Fest (2024) – boosted turnout by 30%.",
     "Organiser, Chess Tournament (2023) – managed 200+ participants.",
+<<<<<<< HEAD
     "Languages: English, Hindi, Bengali",
 <<<<<<< HEAD
   ],
@@ -127,7 +141,12 @@ export const profileData: ProfileData = {
   }
 =======
   
+=======
+    "Languages: English, Hindi, Bengali"
+>>>>>>> 4e42a10 (one more project of truthgaurd a fack checking website)
   ],
   social: {github: "https://github.com/msmahatha/", linkedin: "https://www.linkedin.com/in/msmahatha/"}
 >>>>>>> 08d1f7d (Commit local changes before pull)
 };
+
+    
