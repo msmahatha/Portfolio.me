@@ -116,7 +116,7 @@ export const profileData: ProfileData = {
         "Achieved 80% accuracy in identifying misleading content from various sources.",
         "Implemented a user-friendly interface for submitting claims and viewing results."
       ],
-      image: "https://images.unsplash.com/photo-1508921340858-274875404079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWN0JTIwY2hlY2t8ZW58MHx8fHwxNzE3NTAyMjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1585995603666-5bd6b348de9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWtlJTIwbmV3c3xlbnwwfHx8fDE3NDc3MzA3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "fact check"
     }
   ],
