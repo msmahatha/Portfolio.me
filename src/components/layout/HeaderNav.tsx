@@ -30,18 +30,9 @@ export default function HeaderNav() {
           <div className="md:hidden mr-2">
             <SidebarTrigger />
           </div>
-<<<<<<< HEAD
           <Link href="/about" className="flex items-center space-x-2">
             <Flame className="h-6 w-6 text-accent" />
             <span className="font-bold text-lg"> Msmahatha</span>
-=======
-          <Link href="/" className="flex items-center space-x-2 font-bold text-lg">
-<<<<<<< HEAD
-            <span className="font-bold text-lg">Msmahatha</span>
->>>>>>> 08d1f7d (Commit local changes before pull)
-=======
-            <span className="font-bold text-lg ml-1">Msmahatha</span>
->>>>>>> 147068a (Make the following changes:)
           </Link>
         </div>
 

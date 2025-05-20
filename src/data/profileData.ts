@@ -131,24 +131,11 @@ export const profileData: ProfileData = {
   extras: [
     "Organiser, Texibition – Annual Tech Fest (2024) – boosted turnout by 30%.",
     "Organiser, Chess Tournament (2023) – managed 200+ participants.",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "Languages: English, Hindi, Bengali",
-<<<<<<< HEAD
+    "Lead, Texibition 2K25 – Annual Tech Fest (2025) – boosted turnout by 300%.",
+    "Languages: English, Hindi, Bengali"
   ],
   social: {
-    github: "https://github.com/msmahatha",
-    linkedin: "https://www.linkedin.com/in/msmahatha"
+    github: "https://github.com/msmahatha/",
+    linkedin: "https://www.linkedin.com/in/msmahatha/"
   }
-=======
-  
-=======
-=======
-    "Lead, Texibition 2K25 – Annual Tech Fest (2025) – boosted turnout by 300%.",
->>>>>>> 4766676 (Make the following changes:)
-    "Languages: English, Hindi, Bengali"
->>>>>>> 4e42a10 (one more project of truthgaurd a fack checking website)
-  ],
-  social: {github: "https://github.com/msmahatha/", linkedin: "https://www.linkedin.com/in/msmahatha/"}
->>>>>>> 08d1f7d (Commit local changes before pull)
 };
