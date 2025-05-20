@@ -1,11 +1,9 @@
-
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-// Flame import removed as it's no longer used
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -30,30 +28,25 @@ export default function HeaderNav() {
           <div className="md:hidden mr-2">
             <SidebarTrigger />
           </div>
-          <Link href="/about" className="flex items-center space-x-2">
-            {/* Flame icon removed */}
-            <span className="font-bold text-lg ml-1">Msmahatha</span>
+          <Link href="/about" className="flex items-center">
+            <span className="font-bold text-lg ml-3">Msmahatha</span>
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           {navLinks.map((link) => {
-            // isActive is determined only on the client after mount.
-            // For SSR and initial client render, isActive will effectively be false.
             const isActive = isClient && pathname === link.href;
 
             return (
               <Button
                 key={link.href}
-                // The 'variant' prop is kept consistent for SSR and initial client render
-                // to prevent cva from generating different base classes.
                 variant="ghost"
                 asChild
                 className={cn(
                   "text-sm font-medium transition-colors",
                   isActive
-                    ? "bg-secondary text-secondary-foreground hover:bg-secondary/80" // Mimics 'secondary' variant styles for active link
-                    : "text-muted-foreground" // Default for inactive 'ghost' links. Hover styles from 'ghost' variant.
+                    ? "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground" 
                 )}
               >
                 <Link href={link.href}>{link.label}</Link>
