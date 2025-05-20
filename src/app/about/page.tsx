@@ -14,7 +14,7 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper title="What I'm Doing" className="mt-12">
+      <SectionWrapper title={<TypingEffect text="What I'm Doing" />} className="mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {profileData.whatIDo.map((item) => (
             <WhatIDoCard key={item.title} icon={item.icon} title={item.title} text={item.text} />
