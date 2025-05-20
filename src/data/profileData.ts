@@ -103,7 +103,7 @@ export const profileData: ProfileData = {
         "Implemented user authentication and role-based access control for file permissions.",
         "Enabled real-time notifications for file sharing activities and version history."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaWxlJTIwc2hhcmluZyUyMG9ubGluZXxlbnwwfHx8fDE3NDc3MzAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "file sharing"
     },
     {
@@ -116,7 +116,7 @@ export const profileData: ProfileData = {
         "Achieved 80% accuracy in identifying misleading content from various sources.",
         "Implemented a user-friendly interface for submitting claims and viewing results."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1508921340858-274875404079?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWN0JTIwY2hlY2t8ZW58MHx8fHwxNzE3NTAyMjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "fact check"
     }
   ],
@@ -148,5 +148,7 @@ export const profileData: ProfileData = {
   social: {github: "https://github.com/msmahatha/", linkedin: "https://www.linkedin.com/in/msmahatha/"}
 >>>>>>> 08d1f7d (Commit local changes before pull)
 };
+
+    
 
     
