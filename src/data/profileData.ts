@@ -132,6 +132,7 @@ export const profileData: ProfileData = {
     "Organiser, Texibition – Annual Tech Fest (2024) – boosted turnout by 30%.",
     "Organiser, Chess Tournament (2023) – managed 200+ participants.",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Languages: English, Hindi, Bengali",
 <<<<<<< HEAD
   ],
@@ -142,6 +143,9 @@ export const profileData: ProfileData = {
 =======
   
 =======
+=======
+    "Lead, Texibition 2K25 – Annual Tech Fest (2025) – boosted turnout by 300%.",
+>>>>>>> 4766676 (Make the following changes:)
     "Languages: English, Hindi, Bengali"
 >>>>>>> 4e42a10 (one more project of truthgaurd a fack checking website)
   ],
