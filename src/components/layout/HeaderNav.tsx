@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { Flame } from 'lucide-react'; // Using Flame as a placeholder logo
+// Flame import removed as it's no longer used
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -31,8 +31,8 @@ export default function HeaderNav() {
             <SidebarTrigger />
           </div>
           <Link href="/about" className="flex items-center space-x-2">
-            <Flame className="h-6 w-6 text-accent" />
-            <span className="font-bold text-lg"> Msmahatha</span>
+            {/* Flame icon removed */}
+            <span className="font-bold text-lg ml-1">Msmahatha</span>
           </Link>
         </div>
 
