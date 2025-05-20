@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,6 +68,18 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    /* Hide default cursor for the entire body */
+    /* cursor: none; */
+  }
+  /* Apply cursor: none more broadly and ensure clickable elements get a pointer */
+  html, body {
+    cursor: none;
+  }
+  a[href], button, input[type="submit"], input[type="button"], .cursor-pointer {
+    cursor: none; /* Still hide default, custom cursor will show */
+  }
+  a:hover, button:hover {
+     /* We rely on the custom cursor, no need for default pointer */
   }
 }
 
@@ -88,4 +101,22 @@ body {
   50% {
     opacity: 0;
   }
+}
+
+/* Custom Magnifying Glass Cursor */
+.custom-cursor {
+  position: fixed;
+  transform: translate(-50%, -50%); /* Center the icon on the cursor tip */
+  pointer-events: none; /* Allows clicking through the cursor */
+  z-index: 9999; /* Ensure it's on top */
+  padding: 6px;
+  background-color: hsla(var(--background), 0.5);
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(var(--border), 0.7);
+  transition: opacity 0.2s ease-in-out, transform 0.05s linear; /* Smooth movement and visibility */
+  will-change: transform; /* Performance hint for transform */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
