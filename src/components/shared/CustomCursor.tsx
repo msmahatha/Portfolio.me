@@ -6,36 +6,43 @@ import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const CustomCursor: React.FC = () => {
-  const [position, setPosition] = useState({ x: -200, y: -200 }); // Start further off-screen
+  const [position, setPosition] = useState({ x: -200, y: -200 });
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredText, setHoveredText] = useState<string | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!isVisible) setIsVisible(true);
+      if (!isVisible) {
+        setIsVisible(true);
+      }
       setPosition({ x: e.clientX, y: e.clientY });
 
       const target = e.target as HTMLElement;
-      let textToShow = null;
+      let textToShow: string | null = null;
 
-      // Check if the target is a valid element to extract text from
-      if (target && typeof target.innerText === 'string' &&
-          target.tagName !== 'BODY' && target.tagName !== 'HTML' &&
-          !target.classList.contains('custom-cursor') && // Don't magnify self
-          !target.closest('.custom-cursor') && // Don't magnify children of self
-          target.innerText.trim().length > 0
-      ) { // Added opening brace
+      if (
+        target &&
+        typeof target.innerText === 'string' &&
+        target.tagName !== 'BODY' &&
+        target.tagName !== 'HTML' &&
+        target.innerText.trim().length > 0 &&
+        !target.classList.contains('custom-cursor') && 
+        !target.closest('.custom-cursor') 
+      ) {
         const rawText = target.innerText.trim();
-        // Take a short snippet of text. Adjust length as needed.
-        textToShow = rawText.substring(0, 35);
+        textToShow = rawText.substring(0, 35); // Show a snippet of text
       }
       setHoveredText(textToShow);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    const handleMouseLeave = () => setIsVisible(false);
-    const handleMouseEnter = () => setIsVisible(true);
+    const handleMouseLeave = () => {
+      setIsVisible(false);
+    };
+    const handleMouseEnter = () => {
+      setIsVisible(true);
+    };
 
     document.documentElement.addEventListener('mouseleave', handleMouseLeave);
     document.documentElement.addEventListener('mouseenter', handleMouseEnter);
@@ -63,7 +70,7 @@ const CustomCursor: React.FC = () => {
           <span className="magnified-text">{hoveredText}</span>
         </div>
       ) : (
-        <Search className="w-6 h-6 text-accent" /> {/* Increased icon size slightly */}
+        <Search className="w-8 h-8 text-accent" />
       )}
     </div>
   );
