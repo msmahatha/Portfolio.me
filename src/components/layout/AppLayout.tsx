@@ -7,7 +7,7 @@ import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
-import CustomCursor from '@/components/shared/CustomCursor'; // Import the new cursor
+// import CustomCursor from '@/components/shared/CustomCursor'; // Removed custom cursor import
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
-      <CustomCursor /> {/* Add the custom cursor component here */}
+      {/* <CustomCursor /> */} {/* Removed custom cursor component instance */}
       <div className="flex min-h-screen">
         <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg">
           <SidebarNav />
