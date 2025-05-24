@@ -7,7 +7,7 @@ import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
-// import CustomCursor from '@/components/shared/CustomCursor'; // Removed custom cursor import
+import Waves from '@/components/shared/Waves'; // Import the Waves component
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -16,19 +16,31 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
-      {/* <CustomCursor /> */} {/* Removed custom cursor component instance */}
-      <div className="flex min-h-screen">
-        <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg">
+      <div className="flex min-h-screen relative"> {/* Added position: relative for Waves positioning context */}
+        <Waves
+          lineColor="hsl(var(--accent))" // Using theme's accent color (yellow)
+          backgroundColor="transparent"   // Ensuring app's main background shows through
+          waveSpeedX={0.02}
+          waveSpeedY={0.01}
+          waveAmpX={40}
+          waveAmpY={20}
+          friction={0.9}
+          tension={0.01}
+          maxCursorMove={120}
+          xGap={12}
+          yGap={36}
+        />
+        <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10"> {/* Added z-index */}
           <SidebarNav />
         </Sidebar>
-        <SidebarInset className="flex flex-col flex-1">
+        <SidebarInset className="flex flex-col flex-1 z-10"> {/* Added z-index */}
           <HeaderNav />
           <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
             {children}
           </main>
         </SidebarInset>
       </div>
-      <MobileBottomNav />
+      <MobileBottomNav className="z-10" /> {/* Added z-index */}
       <Toaster />
     </SidebarProvider>
   );
