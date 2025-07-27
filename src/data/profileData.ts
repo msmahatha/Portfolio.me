@@ -136,6 +136,19 @@ export const profileData: ProfileData = {
       image: "https://images.unsplash.com/photo-1585995603666-5bd6b348de9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWtlJTIwbmV3c3xlbnwwfHx8fDE3NDc3MzA3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "fact check",
       link: "https://github.com/msmahatha/TruthGuard"
+    },
+    {
+      name: "Local Multiplayer Chess",
+      period: "May 2024 – Jun 2024",
+      tech: "Next.js, TypeScript, Tailwind CSS, Firebase, WebSockets",
+      highlights: [
+        "Invite friends to private rooms and play chess together in real-time.",
+        "Upload documents, images, or resources and share them with your opponent.",
+        "Manage your games and uploaded files from a personal dashboard.",
+        "Clean, responsive design, optimized for desktops, tablets, and mobile devices."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "chess game"
     }
   ],
   skills: {
@@ -157,3 +170,5 @@ export const profileData: ProfileData = {
     linkedin: "https://www.linkedin.com/in/msmahatha/"
   }
 };
+
+    
