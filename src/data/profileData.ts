@@ -63,6 +63,19 @@ export const profileData: ProfileData = {
       link: "https://github.com/msmahatha/groundwater-level-"
     },
     {
+      name: "Web File Sharing Platform",
+      period: "Nov 2024 – Dec 2024",
+      tech: "Next.js, Firebase Storage, Firebase Auth, Tailwind CSS, TypeScript",
+      highlights: [
+        "Developed a secure web platform for easy file uploads, downloads, and sharing.",
+        "Implemented user authentication and role-based access control for file permissions.",
+        "Enabled real-time notifications for file sharing activities and version history."
+      ],
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaWxlJTIwc2hhcmluZyUyMG9ubGluZXxlbnwwfHx8fDE3NDc3MzAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      dataAiHint: "file sharing",
+      liveLink: "https://filesharing007.netlify.app/"
+    },
+    {
       name: "Ambient Movie Recommendation System",
       period: "Oct 2024 – Nov 2024",
       tech: "Python, TensorFlow, Flask, scikit-learn, OpenWeather API",
@@ -109,19 +122,6 @@ export const profileData: ProfileData = {
       ],
       image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8MTc0NzM3MjE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "text summary"
-    },
-    {
-      name: "Web File Sharing Platform",
-      period: "Nov 2024 – Dec 2024",
-      tech: "Next.js, Firebase Storage, Firebase Auth, Tailwind CSS, TypeScript",
-      highlights: [
-        "Developed a secure web platform for easy file uploads, downloads, and sharing.",
-        "Implemented user authentication and role-based access control for file permissions.",
-        "Enabled real-time notifications for file sharing activities and version history."
-      ],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaWxlJTIwc2hhcmluZyUyMG9ubGluZXxlbnwwfHx8fDE3NDc3MzAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "file sharing",
-      liveLink: "https://filesharing007.netlify.app/"
     },
     {
       name: "TruthGuard - Fact Checking Website",
