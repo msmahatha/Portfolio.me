@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Instagram, X } from 'lucide-react';
 import { profileData } from '@/data/profileData';
 import { SidebarHeader, SidebarContent, SidebarGroup, SidebarGroupLabel } from '@/components/ui/sidebar';
 import { Separator } from '@/components/ui/separator';
@@ -75,6 +75,12 @@ export default function SidebarNav() {
             </Link>
             <Link href={profileData.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
               <Linkedin className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+            </Link>
+            <Link href={profileData.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <Instagram className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+            </Link>
+            <Link href={profileData.social.x} target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+              <X className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
           </div>
         </SidebarGroup>

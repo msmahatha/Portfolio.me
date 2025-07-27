@@ -2,6 +2,8 @@
 export interface SocialLinks {
   github: string;
   linkedin: string;
+  instagram: string;
+  x: string;
 }
 
 export interface WhatIDoItem {

@@ -168,6 +168,8 @@ export const profileData: ProfileData = {
   ],
   social: {
     github: "https://github.com/msmahatha/",
-    linkedin: "https://www.linkedin.com/in/msmahatha/"
+    linkedin: "https://www.linkedin.com/in/msmahatha/",
+    instagram: "https://www.instagram.com/msmahatha/",
+    x: "https://x.com/msmahatha"
   }
 };
