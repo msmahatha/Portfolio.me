@@ -1,8 +1,11 @@
+
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import type { ProjectItem } from '@/types/profile';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink } from 'lucide-react'; // Assuming projects might have links
+import { Button } from '@/components/ui/button';
+import { Github } from 'lucide-react';
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
   const techArray = project.tech.split(',').map(t => t.trim());
@@ -37,12 +40,16 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
           {techArray.length > 5 && <Badge variant="outline" className="text-xs">+{techArray.length - 5} more</Badge>}
         </div>
       </CardContent>
-      {/* Optional Footer for links */}
-      {/* <CardFooter>
-        <Button variant="link" className="p-0 h-auto text-accent">
-          View Project <ExternalLink className="w-4 h-4 ml-1" />
-        </Button>
-      </CardFooter> */}
+      {project.link && (
+        <CardFooter>
+          <Button variant="outline" size="sm" asChild>
+            <Link href={project.link} target="_blank" rel="noopener noreferrer">
+              <Github className="w-4 h-4 mr-2" />
+              View on GitHub
+            </Link>
+          </Button>
+        </CardFooter>
+      )}
     </Card>
   );
 }

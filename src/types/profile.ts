@@ -30,6 +30,7 @@ export interface ProjectItem {
   highlights: string[];
   image?: string; // Optional image for portfolio
   dataAiHint?: string; // Optional AI hint for placeholder image
+  link?: string; // Optional project link
 }
 
 export interface ProfileData {
