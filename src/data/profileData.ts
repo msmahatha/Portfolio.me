@@ -134,7 +134,8 @@ export const profileData: ProfileData = {
         "Implemented a user-friendly interface for submitting claims and viewing results."
       ],
       image: "https://images.unsplash.com/photo-1585995603666-5bd6b348de9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWtlJTIwbmV3c3xlbnwwfHx8fDE3NDc3MzA3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "fact check"
+      dataAiHint: "fact check",
+      link: "https://github.com/msmahatha/TruthGuard"
     }
   ],
   skills: {
