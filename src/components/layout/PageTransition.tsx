@@ -11,6 +11,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
   return (
     <AnimatePresence mode="wait">
       <motion.div
+        suppressHydrationWarning // Add this prop
         key={pathname}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
