@@ -38,6 +38,19 @@ export const profileData: ProfileData = {
   ],
   projects: [
     {
+      name: "Cursor for 2D Animation",
+      period: "Mar 2025 – Apr 2025",
+      tech: "Python, Manim, React.js, Node.js, Express.js, Google Gemini API, JavaScript, Tailwind CSS",
+      highlights: [
+        "Engineered full-stack application converting natural language prompts into animated videos using AI-powered code generation.",
+        "Integrated Google Gemini API for intelligent Python/Manim code generation from user input.",
+        "Developed responsive React frontend with modern UI/UX design and implemented robust Node.js backend architecture.",
+        "Optimized rendering pipeline for faster video creation."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "animation code"
+    },
+    {
       name: "Groundwater Level Predictor",
       period: "Sept 2024 – Present",
       tech: "Python, TensorFlow, LSTM, Pandas, NumPy, scikit-learn",
