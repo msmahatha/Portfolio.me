@@ -59,7 +59,7 @@ export const profileData: ProfileData = {
       ],
       image: "https://images.unsplash.com/photo-1677907564161-7279d5aac75f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3JvdW5kd2F0ZXJ8ZW58MHx8fHwxNzQ3Mjg5OTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "water data",
-      link: "https://github.com/msmahatha/groundwater-level-prediction"
+      link: "https://github.com/msmahatha/groundwater-level-"
     },
     {
       name: "Ambient Movie Recommendation System",
