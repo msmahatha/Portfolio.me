@@ -22,11 +22,6 @@ export default function HeaderNav() {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    // Render nothing on the server to avoid hydration mismatch
-    return null;
-  }
-
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
       <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
@@ -40,7 +35,7 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {navLinks.map((link) => {
+          {isClient ? navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Button
@@ -57,7 +52,11 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          })}
+          }) : navLinks.map((link) => (
+            <div key={link.href} className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}>
+              {link.label}
+            </div>
+          ))}
         </nav>
       </div>
     </header>
