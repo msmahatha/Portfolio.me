@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { User, FileText, Briefcase, Send, Home } from 'lucide-react';
-import { useState, useEffect } from 'react';
 
 const navItems = [
   { href: '/about', label: 'About', icon: Home },
@@ -13,17 +12,12 @@ const navItems = [
 
 export default function MobileBottomNav({ className }: { className?: string }) {
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <nav className={`md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50 ${className}`}>
       <div className="flex justify-around items-center h-16">
         {navItems.map((item) => {
-            const isActive = isClient && pathname === item.href;
+            const isActive = pathname === item.href;
             return (
               <Link
                 key={item.href}
