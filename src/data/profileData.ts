@@ -160,7 +160,7 @@ export const profileData: ProfileData = {
         "Analyzes message frequency, time patterns, emoji use, and conversational dynamics.",
         "Inspired by a viral reel to create a romantic and intelligent web app."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8MTc1MzY1NzkyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "love calculator",
       liveLink: "https://love-calculator007.netlify.app/"
     }
@@ -186,5 +186,3 @@ export const profileData: ProfileData = {
     x: "https://x.com/msmahatha"
   }
 };
-
-    
