@@ -3,18 +3,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, MapPin, Phone, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { profileData } from '@/data/profileData';
-import { SidebarHeader, SidebarContent, SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
+import { SidebarHeader, SidebarContent, SidebarGroup, SidebarGroupLabel } from '@/components/ui/sidebar';
 import { Separator } from '@/components/ui/separator';
 import { usePathname } from 'next/navigation';
-// Tooltip components are not explicitly used here based on refined plan, but could be for richer tooltips
-// import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-
-const navItems = [
-  { href: '/profile-enhancer', label: 'AI Enhancer', icon: Briefcase },
-];
-
 
 export default function SidebarNav() {
   const pathname = usePathname();
@@ -85,29 +78,6 @@ export default function SidebarNav() {
             </Link>
           </div>
         </SidebarGroup>
-
-        <Separator className="my-4" />
-        
-        <SidebarGroup>
-            <SidebarGroupLabel>Tools</SidebarGroupLabel>
-            <SidebarMenu>
-              {navItems.map((item) => (
-                <SidebarMenuItem key={item.label}>
-                  <Link href={item.href} passHref legacyBehavior>
-                    <SidebarMenuButton 
-                      isActive={pathname === item.href} 
-                      className="w-full"
-                      tooltip={{ children: item.label, side: 'right', align: 'center' }}
-                    >
-                      <item.icon className="w-4 h-4 mr-2 group-data-[state=collapsed]:mr-0" />
-                      <span className="group-data-[state=collapsed]:hidden">{item.label}</span>
-                    </SidebarMenuButton>
-                  </Link>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroup>
-
       </SidebarContent>
     </>
   );
