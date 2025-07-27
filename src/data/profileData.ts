@@ -150,6 +150,19 @@ export const profileData: ProfileData = {
       image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzc3xlbnwwfHx8fDE3NTM2MDAxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "chess game",
       liveLink: "https://whimsical-peony-823e6d.netlify.app/"
+    },
+    {
+      name: "💘 Love Calculator",
+      period: "Jun 2024 - Jul 2024",
+      tech: "JavaScript, HTML, CSS, Netlify",
+      highlights: [
+        "Calculates love compatibility based on WhatsApp chat analysis.",
+        "Analyzes message frequency, time patterns, emoji use, and conversational dynamics.",
+        "Inspired by a viral reel to create a romantic and intelligent web app."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "love calculator",
+      liveLink: "https://love-calculator007.netlify.app/"
     }
   ],
   skills: {
@@ -173,3 +186,5 @@ export const profileData: ProfileData = {
     x: "https://x.com/msmahatha"
   }
 };
+
+    
