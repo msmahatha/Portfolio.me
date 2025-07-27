@@ -55,8 +55,8 @@ export default function HeaderNav() {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
-      <div className="container grid h-16 grid-cols-3 items-center max-w-screen-2xl">
-        <div className="flex items-center justify-start">
+      <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
+        <div className="flex items-center">
           <div className="md:hidden mr-2">
             <SidebarTrigger />
           </div>
@@ -65,7 +65,7 @@ export default function HeaderNav() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center justify-center space-x-2 lg:space-x-4 col-start-2">
+        <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -85,9 +85,6 @@ export default function HeaderNav() {
             );
           })}
         </nav>
-
-        {/* Empty div for spacing, keeping the nav centered */}
-        <div className="justify-end hidden md:flex"></div>
       </div>
     </header>
   );
