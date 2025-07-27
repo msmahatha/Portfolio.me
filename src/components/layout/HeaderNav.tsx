@@ -22,8 +22,8 @@ export default function HeaderNav() {
     setIsClient(true);
   }, []);
 
+  // Render a placeholder or null on the server to prevent mismatch
   if (!isClient) {
-    // Render a placeholder or null on the server to prevent mismatch
     return (
        <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
         <div className="container flex h-16 items-center justify-between max-w-screen-2xl">

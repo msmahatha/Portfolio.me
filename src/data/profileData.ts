@@ -8,8 +8,8 @@ export const profileData: ProfileData = {
   phone: "+91 6289600599",
   location: "Kolkata, West Bengal, India",
   about: {
-    paragraph1: "Highly motivated Full Stack Developer with a strong passion for Artificial Intelligence and Machine Learning. For instance, in the 'Groundwater Level Predictor' project, I developed an LSTM model achieving 85% prediction accuracy, contributing to more sustainable water resource management. I also designed, developed, and deployed the 'Ambient Movie Recommendation System' leveraging Python and Flask, which demonstrated a 90% accuracy in suggesting relevant movies based on dynamic user context.",
-    paragraph2: "I am dedicated to crafting clean, efficient code and user-friendly experiences. One such contribution to impactful technological advancements was the 'AI Comic Creator (ComicCrafter),' where I optimized a multimodal generation pipeline for Intel-based edge devices, achieving a 35% reduction in latency, making AI-powered creative tools more accessible. Eager to tackle challenging projects, I continuously learn and explore new technologies. You can find more about my work on GitHub and LinkedIn (links in the sidebar)."
+    paragraph1: "A Full Stack Developer specializing in applied Artificial Intelligence. I architect practical solutions for complex challenges, such as developing an LSTM model that improved groundwater level prediction accuracy by 85%. My passion lies in crafting clean, efficient code and intuitive user experiences.",
+    paragraph2: "I have a proven track record of designing, developing, and deploying high-impact applications. Key projects include an 'Ambient Movie Recommendation System' with 90% accuracy and the 'AI Comic Crafter,' where I optimized a multimodal pipeline for Intel edge devices, cutting latency by 35%. I am always eager to tackle new challenges and master emerging technologies."
   },
   whatIDo: [
     { icon: "pencil",  title: "Web Design",   text: "Crafting clean, cutting-edge UI/UX with professional expertise." },
