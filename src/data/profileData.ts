@@ -71,7 +71,8 @@ export const profileData: ProfileData = {
         "Delivered dynamic filtering algorithms & interactive Flask UI."
       ],
       image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3ZpZSUyMHJlY29tbWVuZGF0aW9ufGVufDB8fHx8MTc0NzI4OTYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "movie cinema"
+      dataAiHint: "movie cinema",
+      link: "https://github.com/msmahatha/ambient-movie-for-you"
     },
     {
       name: "AI Comic Creator “ComicCrafter”",
