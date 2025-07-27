@@ -34,8 +34,8 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {isClient ? navLinks.map((link) => {
-            const isActive = pathname === link.href;
+          {navLinks.map((link) => {
+            const isActive = isClient && pathname === link.href;
             return (
               <Button
                 key={link.href}
@@ -51,11 +51,7 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          }) : navLinks.map((link) => (
-              <Button key={link.href} variant="ghost" className="text-sm font-medium text-muted-foreground" asChild>
-                <Link href={link.href}>{link.label}</Link>
-              </Button>
-          ))}
+          })}
         </nav>
       </div>
     </header>
