@@ -147,7 +147,7 @@ export const profileData: ProfileData = {
         "Manage your games and uploaded files from a personal dashboard.",
         "Clean, responsive design, optimized for desktops, tablets, and mobile devices."
       ],
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzc3xlbnwwfHx8fDE3NTM2MDAxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "chess game"
     }
   ],
@@ -170,5 +170,3 @@ export const profileData: ProfileData = {
     linkedin: "https://www.linkedin.com/in/msmahatha/"
   }
 };
-
-    
