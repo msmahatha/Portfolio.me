@@ -21,38 +21,6 @@ export default function HeaderNav() {
     setIsClient(true);
   }, []);
 
-  // Render a placeholder or null on the server to prevent mismatch
-  if (!isClient) {
-    return (
-       <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
-        <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
-          <div className="flex items-center">
-            <div className="md:hidden mr-2">
-              <SidebarTrigger />
-            </div>
-            <Link href="/about" className="flex items-center">
-              <span className="font-bold text-lg ml-3">Msmahatha</span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                  "inline-flex items-center justify-center whitespace-nowrap rounded-md h-10 px-4 py-2"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      </header>
-    );
-  }
-
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
       <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
@@ -66,7 +34,7 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {navLinks.map((link) => {
+          {isClient ? navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Button
@@ -83,7 +51,11 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          })}
+          }) : navLinks.map((link) => (
+              <Button key={link.href} variant="ghost" className="text-sm font-medium text-muted-foreground" asChild>
+                <Link href={link.href}>{link.label}</Link>
+              </Button>
+          ))}
         </nav>
       </div>
     </header>
