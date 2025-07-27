@@ -8,6 +8,7 @@ import HeaderNav from "@/components/layout/HeaderNav";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from 'next/dynamic';
+import PageTransition from './PageTransition';
 
 const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
 
@@ -38,7 +39,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <SidebarInset className="flex flex-col flex-1 z-10"> {/* Added z-index */}
           <HeaderNav />
           <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
-            {children}
+            <PageTransition>
+              {children}
+            </PageTransition>
           </main>
         </SidebarInset>
       </div>

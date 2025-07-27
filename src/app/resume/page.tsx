@@ -1,8 +1,14 @@
 
+import type { Metadata } from 'next';
 import { profileData } from '@/data/profileData';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import TimelineItem from '@/components/shared/TimelineItem';
 import SkillBadge from '@/components/shared/SkillBadge';
+
+export const metadata: Metadata = {
+  title: 'Resume | Madhusudan Mahatha',
+  description: 'View the resume of Madhusudan Mahatha, detailing work experience, education, projects, and skills.',
+};
 
 export default function ResumePage() {
   const { education, work, projects, skills, certifications, extras } = profileData;

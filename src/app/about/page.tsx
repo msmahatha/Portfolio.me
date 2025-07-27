@@ -1,8 +1,14 @@
 
+import type { Metadata } from 'next';
 import { profileData } from '@/data/profileData';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import WhatIDoCard from '@/components/shared/WhatIDoCard';
 import TypingEffect from '@/components/shared/TypingEffect'; // Import the new component
+
+export const metadata: Metadata = {
+  title: 'About | Madhusudan Mahatha',
+  description: "Learn more about Madhusudan Mahatha, a Full Stack Developer specializing in applied Artificial Intelligence.",
+};
 
 export default function AboutPage() {
   return (
