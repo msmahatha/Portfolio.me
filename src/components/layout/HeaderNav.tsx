@@ -52,7 +52,12 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          }) : null}
+          }) : navLinks.map((link) => (
+            // Render a placeholder on the server to prevent layout shift and mismatch
+            <div key={link.href} className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}>
+              {link.label}
+            </div>
+          ))}
         </nav>
       </div>
     </header>
