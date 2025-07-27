@@ -120,7 +120,8 @@ export const profileData: ProfileData = {
         "Enabled real-time notifications for file sharing activities and version history."
       ],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaWxlJTIwc2hhcmluZyUyMG9ubGluZXxlbnwwfHx8fDE3NDc3MzAxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "file sharing"
+      dataAiHint: "file sharing",
+      liveLink: "https://filesharing007.netlify.app/"
     },
     {
       name: "TruthGuard - Fact Checking Website",

@@ -31,6 +31,7 @@ export interface ProjectItem {
   image?: string; // Optional image for portfolio
   dataAiHint?: string; // Optional AI hint for placeholder image
   link?: string; // Optional project link
+  liveLink?: string; // Optional live website link
 }
 
 export interface ProfileData {

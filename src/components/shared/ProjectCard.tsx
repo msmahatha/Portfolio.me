@@ -5,10 +5,12 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import type { ProjectItem } from '@/types/profile';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
   const techArray = project.tech.split(',').map(t => t.trim());
+
+  const hasLinks = project.link || project.liveLink;
 
   return (
     <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-shadow duration-300">
@@ -40,14 +42,24 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
           {techArray.length > 5 && <Badge variant="outline" className="text-xs">+{techArray.length - 5} more</Badge>}
         </div>
       </CardContent>
-      {project.link && (
-        <CardFooter>
-          <Button variant="outline" size="sm" asChild>
-            <Link href={project.link} target="_blank" rel="noopener noreferrer">
-              <Github className="w-4 h-4 mr-2" />
-              View on GitHub
-            </Link>
-          </Button>
+      {hasLinks && (
+        <CardFooter className="flex items-center gap-2">
+          {project.link && (
+            <Button variant="outline" size="sm" asChild>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                <Github className="w-4 h-4 mr-2" />
+                GitHub
+              </Link>
+            </Button>
+          )}
+          {project.liveLink && (
+            <Button variant="outline" size="sm" asChild>
+              <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View Live
+              </Link>
+            </Button>
+          )}
         </CardFooter>
       )}
     </Card>
