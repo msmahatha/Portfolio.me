@@ -83,7 +83,8 @@ export const profileData: ProfileData = {
         "Optimised for Intel-based edge devices, reducing latency by 35%."
       ],
       image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21pY2Jvb2t8ZW58MHx8fHwxNzQ3MjkxOTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "comic art"
+      dataAiHint: "comic art",
+      link: "https://github.com/msmahatha/ComicCrafter-AI"
     },
     {
       name: "Facial Recognition Attendance System",
