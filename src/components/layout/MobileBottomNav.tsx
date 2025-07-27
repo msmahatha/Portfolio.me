@@ -10,10 +10,9 @@ const navItems = [
   { href: '/about', label: 'About', icon: Home },
   { href: '/resume', label: 'Resume', icon: FileText },
   { href: '/portfolio', label: 'Portfolio', icon: Briefcase },
-  // { href: '/contact', label: 'Contact', icon: Send }, // Removed contact link
 ];
 
-export default function MobileBottomNav() {
+export default function MobileBottomNav({ className }: { className?: string }) {
   const pathname = usePathname();
   const [isClient, setIsClient] = useState(false);
 
@@ -21,15 +20,10 @@ export default function MobileBottomNav() {
     setIsClient(true);
   }, []);
 
-  if (!isClient) {
-    // Return null or a placeholder on the server to prevent mismatch
-    return null;
-  }
-
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50">
+    <nav className={`md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50 ${className}`}>
       <div className="flex justify-around items-center h-16">
-        {navItems.map((item) => (
+        {isClient && navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
