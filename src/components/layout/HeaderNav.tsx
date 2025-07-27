@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -36,10 +36,13 @@ export default function HeaderNav() {
           </div>
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navLinks.map((link) => (
-               <Link
+              <Link
                 key={link.href}
                 href={link.href}
-                className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}
+                className={cn(
+                  "text-sm font-medium transition-colors text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                  "inline-flex items-center justify-center whitespace-nowrap rounded-md h-10 px-4 py-2"
+                )}
               >
                 {link.label}
               </Link>
@@ -52,8 +55,8 @@ export default function HeaderNav() {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
-      <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
-        <div className="flex items-center">
+      <div className="container grid h-16 grid-cols-3 items-center max-w-screen-2xl">
+        <div className="flex items-center justify-start">
           <div className="md:hidden mr-2">
             <SidebarTrigger />
           </div>
@@ -62,7 +65,7 @@ export default function HeaderNav() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
+        <nav className="hidden md:flex items-center justify-center space-x-2 lg:space-x-4 col-start-2">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -82,6 +85,9 @@ export default function HeaderNav() {
             );
           })}
         </nav>
+
+        {/* Empty div for spacing, keeping the nav centered */}
+        <div className="justify-end hidden md:flex"></div>
       </div>
     </header>
   );
