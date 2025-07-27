@@ -3,7 +3,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { User, FileText, Briefcase, Send, Home } from 'lucide-react'; // Added Home for /about
+import { User, FileText, Briefcase, Send, Home } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
   { href: '/about', label: 'About', icon: Home },
@@ -14,6 +15,16 @@ const navItems = [
 
 export default function MobileBottomNav() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    // Return null or a placeholder on the server to prevent mismatch
+    return null;
+  }
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50">

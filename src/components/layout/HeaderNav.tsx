@@ -36,7 +36,24 @@ export default function HeaderNav() {
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           {navLinks.map((link) => {
-            const isActive = isClient && pathname === link.href;
+            if (!isClient) {
+              return (
+                <Button
+                  key={link.href}
+                  variant="ghost"
+                  asChild
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  )}
+                >
+                  {/* Render a simple anchor during SSR to avoid hydration mismatch */}
+                  <a href={link.href}>{link.label}</a>
+                </Button>
+              );
+            }
+
+            const isActive = pathname === link.href;
 
             return (
               <Button
@@ -47,7 +64,7 @@ export default function HeaderNav() {
                   "text-sm font-medium transition-colors",
                   isActive
                     ? "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground" 
+                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                 )}
               >
                 <Link href={link.href}>{link.label}</Link>
