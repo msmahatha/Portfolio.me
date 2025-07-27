@@ -138,7 +138,7 @@ export const profileData: ProfileData = {
       link: "https://github.com/msmahatha/TruthGuard"
     },
     {
-      name: "Local Multiplayer Chess",
+      name: "Chess + File upload",
       period: "May 2024 – Jun 2024",
       tech: "Next.js, TypeScript, Tailwind CSS, Firebase, WebSockets",
       highlights: [
