@@ -7,7 +7,9 @@ import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
-import Waves from '@/components/shared/Waves'; // Import the Waves component
+import dynamic from 'next/dynamic';
+
+const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -45,5 +47,3 @@ export default function AppLayout({ children }: AppLayoutProps) {
     </SidebarProvider>
   );
 }
-
-    
