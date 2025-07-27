@@ -44,7 +44,6 @@ export const profileData: ProfileData = {
       highlights: [
         "Engineered full-stack application converting natural language prompts into animated videos using AI-powered code generation.",
         "Integrated Google Gemini API for intelligent Python/Manim code generation from user input.",
-        "Developed responsive React frontend with modern UI/UX design and implemented robust Node.js backend architecture.",
         "Optimized rendering pipeline for faster video creation."
       ],
       image: "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW5pbSUyMGNvZGV8ZW58MHx8fHwxNzUzNTk3Njc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
