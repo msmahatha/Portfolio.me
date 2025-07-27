@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -37,9 +36,13 @@ export default function HeaderNav() {
           </div>
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navLinks.map((link) => (
-              <div key={link.href} className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}>
+               <Link
+                key={link.href}
+                href={link.href}
+                className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}
+              >
                 {link.label}
-              </div>
+              </Link>
             ))}
           </nav>
         </div>
@@ -70,7 +73,7 @@ export default function HeaderNav() {
                 className={cn(
                   "text-sm font-medium transition-colors",
                   isActive
-                    ? "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                 )}
               >
