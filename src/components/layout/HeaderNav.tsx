@@ -22,6 +22,31 @@ export default function HeaderNav() {
     setIsClient(true);
   }, []);
 
+  if (!isClient) {
+    // Render a placeholder or null on the server to prevent mismatch
+    return (
+       <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
+        <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
+          <div className="flex items-center">
+            <div className="md:hidden mr-2">
+              <SidebarTrigger />
+            </div>
+            <Link href="/about" className="flex items-center">
+              <span className="font-bold text-lg ml-3">Msmahatha</span>
+            </Link>
+          </div>
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
+            {navLinks.map((link) => (
+              <div key={link.href} className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}>
+                {link.label}
+              </div>
+            ))}
+          </nav>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
       <div className="container flex h-16 items-center justify-between max-w-screen-2xl">
@@ -35,7 +60,7 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {isClient ? navLinks.map((link) => {
+          {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Button
@@ -52,11 +77,7 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          }) : navLinks.map((link) => (
-            <div key={link.href} className={cn(buttonVariants({ variant: 'ghost' }), "text-sm font-medium text-muted-foreground")}>
-              {link.label}
-            </div>
-          ))}
+          })}
         </nav>
       </div>
     </header>
