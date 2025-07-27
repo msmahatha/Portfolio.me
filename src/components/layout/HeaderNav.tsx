@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 
@@ -35,26 +35,8 @@ export default function HeaderNav() {
         </div>
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {navLinks.map((link) => {
-            if (!isClient) {
-              return (
-                <Button
-                  key={link.href}
-                  variant="ghost"
-                  asChild
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                  )}
-                >
-                  {/* Render a simple anchor during SSR to avoid hydration mismatch */}
-                  <a href={link.href}>{link.label}</a>
-                </Button>
-              );
-            }
-
+          {isClient ? navLinks.map((link) => {
             const isActive = pathname === link.href;
-
             return (
               <Button
                 key={link.href}
@@ -70,7 +52,7 @@ export default function HeaderNav() {
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             );
-          })}
+          }) : null}
         </nav>
       </div>
     </header>

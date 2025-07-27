@@ -20,10 +20,19 @@ export default function MobileBottomNav({ className }: { className?: string }) {
     setIsClient(true);
   }, []);
 
+  if (!isClient) {
+    // Render a placeholder on the server to prevent hydration mismatch
+    return (
+        <nav className={`md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50 ${className}`}>
+            <div className="flex justify-around items-center h-16" />
+        </nav>
+    );
+  }
+
   return (
     <nav className={`md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border shadow-lg z-50 ${className}`}>
       <div className="flex justify-around items-center h-16">
-        {isClient && navItems.map((item) => (
+        {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
