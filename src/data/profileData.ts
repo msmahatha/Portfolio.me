@@ -48,6 +48,7 @@ export const profileData: ProfileData = {
       ],
       image: "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8YWdyaWN1bHR1cmV8ZW58MHx8fHwxNzU0MzMxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "agriculture market",
+      liveLink: "https://agrokart.netlify.app/"
     },
     {
       name: "Cursor for 2D Animation",
