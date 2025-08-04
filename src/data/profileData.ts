@@ -38,6 +38,18 @@ export const profileData: ProfileData = {
   ],
   projects: [
     {
+      name: "Agrokart",
+      period: "Jul 2024 - Present",
+      tech: "Next.js, TypeScript, Tailwind CSS, Firebase",
+      highlights: [
+        "A dynamic website for agricultural solutions and goods.",
+        "Features a marketplace for farmers to buy and sell products.",
+        "Provides resources and solutions for common agricultural challenges."
+      ],
+      image: "https://placehold.co/600x400.png",
+      dataAiHint: "agriculture market",
+    },
+    {
       name: "Cursor for 2D Animation",
       period: "Mar 2025 – Apr 2025",
       tech: "Python, Manim, React.js, Node.js, Express.js, Google Gemini API, JavaScript, Tailwind CSS",
