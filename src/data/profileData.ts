@@ -8,8 +8,8 @@ export const profileData: ProfileData = {
   phone: "+91 6289600599",
   location: "Kolkata, West Bengal, India",
   about: {
-    paragraph1: "A Full Stack Developer specializing in applied Artificial Intelligence. I architect practical solutions for complex challenges, such as developing an LSTM model that improved groundwater level prediction accuracy by 85%. My passion lies in crafting clean, efficient code and intuitive user experiences.",
-    paragraph2: "I have a proven track record of designing, developing, and deploying high-impact applications. Key projects include an 'Ambient Movie Recommendation System' with 90% accuracy and the 'AI Comic Crafter,' where I optimized a multimodal pipeline for Intel edge devices, cutting latency by 35%. I am always eager to tackle new challenges and master emerging technologies."
+    paragraph1: "I’m a passionate Full Stack Developer with a strong focus on Applied Artificial Intelligence and End-to-End System Architecture. I specialize in building scalable web applications and intelligent systems that bridge real-world problems with AI-powered solutions.",
+    paragraph2: "I thrive at the intersection of creativity and logic — crafting seamless user experiences backed by robust, efficient code. My work includes deploying groundwater prediction models using LSTM, developing a context-aware movie recommendation system, and leading innovation in edge-device deployments for AI-driven comic generation.  Currently, I’m expanding my expertise in cloud integration, real-time systems, and AI-human interaction interfaces, while continuously refining my skills in technologies like React, Node.js, MongoDB, Python, and OpenCV.  Always learning. Always building."
   },
   whatIDo: [
     { icon: "pencil",  title: "Web Design",   text: "Crafting clean, cutting-edge UI/UX with professional expertise." },
