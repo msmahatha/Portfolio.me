@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -8,8 +9,8 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/about', label: 'About' },
-  { href: '/resume', label: 'Resume' },
   { href: '/portfolio', label: 'Portfolio' },
+  { href: '/resume', label: 'Resume' },
 ];
 
 export default function HeaderNav() {

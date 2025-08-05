@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -6,8 +7,8 @@ import { User, FileText, Briefcase, Send, Home } from 'lucide-react';
 
 const navItems = [
   { href: '/about', label: 'About', icon: Home },
-  { href: '/resume', label: 'Resume', icon: FileText },
   { href: '/portfolio', label: 'Portfolio', icon: Briefcase },
+  { href: '/resume', label: 'Resume', icon: FileText },
 ];
 
 export default function MobileBottomNav({ className }: { className?: string }) {
