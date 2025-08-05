@@ -45,6 +45,7 @@ export interface ProfileData {
   about: {
     paragraph1: string;
     paragraph2: string;
+    paragraph3?: string;
   };
   whatIDo: WhatIDoItem[];
   education: EducationItem[];

@@ -17,6 +17,7 @@ export default function AboutPage() {
         <div className="space-y-4 text-foreground/90 leading-relaxed">
           <p>{profileData.about.paragraph1}</p>
           <p>{profileData.about.paragraph2}</p>
+          {profileData.about.paragraph3 && <p>{profileData.about.paragraph3}</p>}
         </div>
       </SectionWrapper>
 
