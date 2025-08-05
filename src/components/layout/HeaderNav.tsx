@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -15,6 +16,11 @@ const navLinks = [
 
 export default function HeaderNav() {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 rounded-b-lg shadow-md border-b border-accent">
@@ -30,7 +36,7 @@ export default function HeaderNav() {
 
         <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = isClient && pathname === link.href;
             return (
               <Button
                 key={link.href}
