@@ -9,7 +9,7 @@ export const profileData: ProfileData = {
   location: "Kolkata, West Bengal, India",
   about: {
     paragraph1: "I’m a passionate Full Stack Developer with a strong focus on Applied Artificial Intelligence and End-to-End System Architecture. I specialize in building scalable web applications and intelligent systems that bridge real-world problems with AI-powered solutions.",
-    paragraph2: "I thrive at the intersection of creativity and logic — crafting seamless user experiences backed by robust, efficient code. My work includes deploying groundwater prediction models using LSTM, developing a context-aware movie recommendation system, and leading innovation in edge-device deployments for AI-driven comic generation.  Currently, I’m expanding my expertise in cloud integration, real-time systems, and AI-human interaction interfaces, while continuously refining my skills in technologies like React, Node.js, MongoDB, Python, and OpenCV.",
+    paragraph2: "I thrive at the intersection of creativity and logic for crafting seamless user experiences backed by robust, efficient code. My work includes deploying groundwater prediction models using LSTM, developing a context-aware movie recommendation system, and leading innovation in edge-device deployments for AI-driven comic generation.  Currently, I’m expanding my expertise in cloud integration, real-time systems, and AI-human interaction interfaces, while continuously refining my skills in technologies like React, Node.js, MongoDB, Python, and OpenCV.",
     paragraph3: "Always learning. Always building."
   },
   whatIDo: [
