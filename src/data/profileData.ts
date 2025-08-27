@@ -29,7 +29,7 @@ export const profileData: ProfileData = {
     {
       role: "AI Automation Intern",
       company: "Zoca Ai",
-      period: "Mar 2025 – Present",
+      period: "Mar 2025 – Jul 2025",
       bullets: [
         "Developed and deployed 3 AI-based automation systems using Python, CI/CD, and Jenkins, resulting in a 25% reduction in manual processing time.",
         "Configured and managed over 10 virtual machines (VMware, VirtualBox) for ML model deployment and testing, ensuring 99.9% uptime for development environments.",
