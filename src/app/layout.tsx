@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google'; // Corrected import for Geist
 import './globals.css';
 import AppLayout from '@/components/layout/AppLayout';
+import ClientOnlyLoading from '@/components/layout/ClientOnlyLoading';
 
 const geistSans = Geist({ // Using default Geist (sans-serif)
   variable: '--font-geist-sans',
