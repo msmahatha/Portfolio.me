@@ -2,6 +2,7 @@
 "use client";
 
 import type { ReactNode } from 'react';
+import { useState, useEffect } from 'react';
 import { SidebarProvider, Sidebar, SidebarInset } from "@/components/ui/sidebar";
 import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
@@ -9,6 +10,7 @@ import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from 'next/dynamic';
 import PageTransition from './PageTransition';
+import LoadingScreen from '@/components/shared/LoadingScreen';
 
 const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
 
@@ -17,6 +19,21 @@ interface AppLayoutProps {
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
       <div className="flex min-h-screen relative"> {/* Added position: relative for Waves positioning context */}
