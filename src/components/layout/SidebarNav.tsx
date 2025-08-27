@@ -13,8 +13,8 @@ export default function SidebarNav() {
   const pathname = usePathname();
   return (
     <>
-      <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-1.5 group-data-[state=collapsed]:py-4 transition-all duration-200">
-        <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-9 group-data-[state=collapsed]:h-9 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-200">
+      <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-2 group-data-[state=collapsed]:py-4 transition-all duration-300 ease-in-out">
+        <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-10 group-data-[state=collapsed]:h-10 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-300 ease-in-out">
           <Image
             src="https://i.ibb.co/CFGFw2x/Whats-App-Image-2025-03-08-at-22-15-53.jpg"
             alt={profileData.name}
@@ -23,44 +23,46 @@ export default function SidebarNav() {
             data-ai-hint="man profile"
           />
         </div>
-        <h1 className="text-xl font-semibold text-foreground group-data-[state=collapsed]:hidden">{profileData.name}</h1>
-        <p className="text-xs bg-secondary text-secondary-foreground rounded-full px-3 py-1 mt-1 inline-block group-data-[state=collapsed]:hidden">
-          {profileData.title}
-        </p>
+        <div className="transition-opacity duration-200 group-data-[state=collapsed]:opacity-0 group-data-[state=collapsed]:h-0 group-data-[state=collapsed]:invisible">
+          <h1 className="text-xl font-semibold text-foreground">{profileData.name}</h1>
+          <p className="text-xs bg-secondary text-secondary-foreground rounded-full px-3 py-1 mt-1 inline-block">
+            {profileData.title}
+          </p>
+        </div>
       </SidebarHeader>
 
-      <SidebarContent className="p-4">
+      <SidebarContent className="p-4 transition-all duration-300 ease-in-out group-data-[state=collapsed]:p-2">
         <SidebarGroup>
           <SidebarGroupLabel>Contact</SidebarGroupLabel>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
             <li className="flex items-center">
               <a 
                 href={`mailto:${profileData.email}`} 
                 className="flex items-center hover:text-accent transition-colors w-full overflow-hidden"
                 title={profileData.email}
               >
-                <Mail className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
+                <Mail className="w-4 h-4 mr-3 text-accent flex-shrink-0" />
                 <span className="group-data-[state=collapsed]:hidden truncate"> 
                   {profileData.email}
                 </span>
-                <span className="hidden group-data-[state=collapsed]:inline">
+                <span className="hidden group-data-[state=collapsed]:inline sr-only">
                   Email
                 </span>
               </a>
             </li>
             <li className="flex items-center">
-              <Phone className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
                <a href={`tel:${profileData.phone.replace(/\s+/g, '')}`} 
-                  className="group-data-[state=collapsed]:hidden hover:text-accent transition-colors truncate" 
+                  className="flex items-center group-data-[state=collapsed]:justify-center hover:text-accent transition-colors truncate w-full"
                   title={profileData.phone}>
-                  {profileData.phone}
+                  <Phone className="w-4 h-4 mr-3 text-accent flex-shrink-0" />
+                  <span className="group-data-[state=collapsed]:hidden">{profileData.phone}</span>
+                  <span className="hidden group-data-[state=collapsed]:inline sr-only">Phone</span>
                 </a>
-              <span className="hidden group-data-[state=collapsed]:inline" title={profileData.phone}>Phone</span>
             </li>
             <li className="flex items-center">
-              <MapPin className="w-4 h-4 mr-2 text-accent flex-shrink-0" />
+              <MapPin className="w-4 h-4 mr-3 text-accent flex-shrink-0" />
               <span className="group-data-[state=collapsed]:hidden truncate" title={profileData.location}>{profileData.location}</span>
-               <span className="hidden group-data-[state=collapsed]:inline" title={profileData.location}>Location</span>
+               <span className="hidden group-data-[state=collapsed]:inline sr-only" title={profileData.location}>Location</span>
             </li>
           </ul>
         </SidebarGroup>
@@ -69,7 +71,7 @@ export default function SidebarNav() {
 
         <SidebarGroup>
           <SidebarGroupLabel>Social</SidebarGroupLabel>
-          <div className="flex space-x-3 group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-x-0 group-data-[state=collapsed]:space-y-3 group-data-[state=collapsed]:items-center">
+          <div className="flex justify-around group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-y-4">
             <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>

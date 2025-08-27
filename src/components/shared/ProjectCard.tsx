@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
   const hasLinks = project.link || project.liveLink;
 
   return (
-    <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-shadow duration-300">
+    <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-all duration-300 ease-in-out hover:scale-105 transform">
       {project.image && (
         <div className="relative w-full h-48">
           <Image
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
       </CardContent>
       {hasLinks && (
-        <CardFooter className="flex items-center gap-2">
+        <CardFooter className="flex items-center gap-2 mt-auto pt-4">
           {project.link && (
             <Button variant="outline" size="sm" asChild>
               <Link href={project.link} target="_blank" rel="noopener noreferrer">
