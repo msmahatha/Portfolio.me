@@ -29,11 +29,15 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
   return (
     <>
+      {/* The loading screen is always rendered on the client first */}
       <ClientOnlyLoading onFinished={() => setIsLoading(false)} />
       
-      <div className={cn("transition-opacity duration-500", isLoading ? "opacity-0" : "opacity-100")}>
+      {/* The main content is hidden via opacity until client is mounted and loading is finished */}
+      <div className={cn("transition-opacity duration-500", !isMounted || isLoading ? "opacity-0" : "opacity-100")}>
         <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
           <div className="flex min-h-screen relative">
+            
+            {/* These components are only rendered on the client after mount to prevent hydration errors */}
             {isMounted && (
               <>
                 <Waves
