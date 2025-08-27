@@ -203,7 +203,12 @@ export const profileData: ProfileData = {
     "Databases": ["MongoDB", "SQLite"],
     "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git"]
   },
-  certifications: ["Intel Unnati Training 2025"],
+  certifications: [
+    "Intel Unnati Training 2025",
+    "Getting Started with Artificial Intelligence by IBM",
+    "Database Management System Certification Infosys Springboard",
+    "Java Programming Training Spoken Tutorial Project IIT Bombay"
+  ],
   extras: [
     "Organiser, Texibition – Annual Tech Fest (2024) – boosted turnout by 30%.",
     "Organiser, Chess Tournament (2023) – managed 200+ participants.",
