@@ -21,10 +21,10 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [isClient, setIsClient] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setIsMounted(true);
   }, []);
 
   return (
@@ -34,7 +34,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <div className={cn("transition-opacity duration-500", isLoading ? "opacity-0" : "opacity-100")}>
         <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
           <div className="flex min-h-screen relative">
-            {isClient && (
+            {isMounted && (
               <>
                 <Waves
                   lineColor="hsl(var(--accent))"
@@ -64,7 +64,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               </main>
             </SidebarInset>
           </div>
-          {isClient && <MobileBottomNav className="z-10" />}
+          {isMounted && <MobileBottomNav className="z-10" />}
           <Toaster />
         </SidebarProvider>
       </div>
