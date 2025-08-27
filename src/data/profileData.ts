@@ -183,7 +183,7 @@ export const profileData: ProfileData = {
       liveLink: "https://whimsical-peony-823e6d.netlify.app/"
     },
     {
-      name: "💘 Love Calculator",
+      name: "Love Calculator",
       period: "Jun 2024 - Jul 2024",
       tech: "JavaScript, HTML, CSS, Netlify",
       highlights: [
