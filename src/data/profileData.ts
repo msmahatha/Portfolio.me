@@ -66,6 +66,21 @@ export const profileData: ProfileData = {
       liveLink: "https://2danimator.netlify.app/"
     },
     {
+      name: "Website Cloner",
+      period: "Jan 2025 - Present",
+      tech: "Next.js, AI, HTML, CSS, JavaScript, Tailwind CSS",
+      highlights: [
+        "Leverages AI for a self-healing backend.",
+        "Provides real-time analysis of any website's HTML, CSS, and JavaScript.",
+        "Smart fetching strategies bypass common hurdles like CORS.",
+        "A next-generation tool for developers, designers, and SEO analysts."
+      ],
+      image: "https://placehold.co/600/400.png",
+      dataAiHint: "website analytics",
+      link: "https://github.com/msmahatha/Website-Creator.git",
+      liveLink: "https://websitecreator007.netlify.app/"
+    },
+    {
       name: "Groundwater Level Predictor",
       period: "Sept 2024 – Present",
       tech: "Python, TensorFlow, LSTM, Pandas, NumPy, scikit-learn",
