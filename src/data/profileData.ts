@@ -22,7 +22,7 @@ export const profileData: ProfileData = {
     {
       degree: "B.Tech, Brainware University",
       period: "Aug 2022 – Jun 2026 (expected)",
-      details: ["Current CGPA avg: 9.20/10 (top 5 semesters)"]
+      details: ["9.3 till 6th sem"]
     }
   ],
   work: [
