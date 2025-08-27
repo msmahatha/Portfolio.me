@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/resume', label: 'Resume' },
-  { href: '/profile-enhancer', label: 'AI Enhancer', icon: Sparkles },
 ];
 
 export default function HeaderNav() {
