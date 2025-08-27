@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/resume', label: 'Resume' },
+  { href: '/testimonials', label: 'Testimonials' },
 ];
 
 export default function HeaderNav() {
@@ -51,7 +52,6 @@ export default function HeaderNav() {
                 )}
               >
                 <Link href={link.href} className="flex items-center gap-2">
-                  {link.icon && <link.icon className="w-4 h-4" />}
                   {link.label}
                 </Link>
               </Button>
