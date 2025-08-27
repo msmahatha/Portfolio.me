@@ -44,11 +44,11 @@ const prompt = ai.definePrompt({
   - Title: {{{title}}}
   - Key Skills:
     {{#each skills}}
-      - {{@key}}: {{join this ", "}}
+      - {{@key}}: {{#each this}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
     {{/each}}
   - Recent Work:
     {{#each workExperience}}
-      - {{{role}}} at {{{company}}}: {{#if bullets}}{{join bullets ", "}}{{/if}}
+      - {{{role}}} at {{{company}}}: {{#if bullets}}{{#each bullets}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}{{/if}}
     {{/each}}
   
   Generate two distinct paragraphs and return them in the 'aboutMeText' array.
