@@ -3,13 +3,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Briefcase, FileText } from 'lucide-react';
+import { Home, Briefcase, FileText, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navItems = [
   { href: '/about', label: 'About', icon: Home },
   { href: '/portfolio', label: 'Portfolio', icon: Briefcase },
   { href: '/resume', label: 'Resume', icon: FileText },
+  { href: '/profile-enhancer', label: 'Enhancer', icon: Sparkles },
 ];
 
 export default function MobileBottomNav({ className }: { className?: string }) {

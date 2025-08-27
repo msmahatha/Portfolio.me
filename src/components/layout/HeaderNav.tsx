@@ -7,11 +7,13 @@ import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
+import { Sparkles } from 'lucide-react';
 
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/resume', label: 'Resume' },
+  { href: '/profile-enhancer', label: 'AI Enhancer', icon: Sparkles },
 ];
 
 export default function HeaderNav() {
@@ -49,7 +51,10 @@ export default function HeaderNav() {
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                 )}
               >
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} className="flex items-center gap-2">
+                  {link.icon && <link.icon className="w-4 h-4" />}
+                  {link.label}
+                </Link>
               </Button>
             );
           })}

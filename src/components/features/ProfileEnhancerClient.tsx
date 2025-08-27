@@ -28,7 +28,7 @@ export default function ProfileEnhancerClient() {
         period: w.period,
         bullets: w.bullets,
       })),
-      skills: profileData.skills,
+      skills: Object.values(profileData.skills).flat(), // Flatten the skills object into an array
     };
 
     try {
