@@ -7,7 +7,7 @@ import { profileData } from '@/data/profileData';
 const LoadingScreen = () => {
   return (
     <div className="fixed inset-0 bg-background flex items-center justify-center z-[200] fade-out-fast">
-      <div className="text-center">
+      <div className="text-center p-8 rounded-lg bg-background/50 illuminating-box">
         <h1 
           className="text-4xl md:text-6xl font-bold animate-pulse-text"
           style={{ color: '#FFCA28' }} // Firebase Amber
