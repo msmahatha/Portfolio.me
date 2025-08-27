@@ -118,7 +118,7 @@ body {
   to { opacity: 0; }
 }
 
-.loading-screen.is-loaded {
+.loading-screen-fade-out {
   animation: fade-out 0.5s forwards;
   pointer-events: none;
 }

@@ -1,19 +1,10 @@
 
 'use client';
 
-import { cn } from '@/lib/utils';
-
-interface LoadingScreenProps {
-  isLoaded: boolean;
-}
-
-const LoadingScreen = ({ isLoaded }: LoadingScreenProps) => {
+const LoadingScreen = () => {
   return (
     <div
-      className={cn(
-        "loading-screen fixed inset-0 bg-background flex items-center justify-center z-[100] transition-opacity duration-500",
-        { 'is-loaded': isLoaded }
-      )}
+      className="fixed inset-0 bg-background flex items-center justify-center z-[100]"
     >
       <div className="flex flex-col items-center">
         <div className="flex items-end h-16 space-x-2">

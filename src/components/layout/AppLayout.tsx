@@ -2,7 +2,6 @@
 "use client";
 
 import type { ReactNode } from 'react';
-import { useState, useEffect } from 'react';
 import { SidebarProvider, Sidebar, SidebarInset } from "@/components/ui/sidebar";
 import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
@@ -10,7 +9,7 @@ import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from 'next/dynamic';
 import PageTransition from './PageTransition';
-import LoadingScreen from '@/components/shared/LoadingScreen';
+import ClientOnlyLoading from './ClientOnlyLoading';
 
 const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
 
@@ -19,21 +18,9 @@ interface AppLayoutProps {
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Simulate loading time and then trigger the fade-out
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 2500); // 2.5 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
-
   return (
     <>
-      <LoadingScreen isLoaded={isLoaded} />
+      <ClientOnlyLoading />
       <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
         <div className="flex min-h-screen relative">
           <Waves
