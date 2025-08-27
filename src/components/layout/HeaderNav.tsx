@@ -7,7 +7,6 @@ import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
-import { Sparkles } from 'lucide-react';
 
 const navLinks = [
   { href: '/about', label: 'About' },
