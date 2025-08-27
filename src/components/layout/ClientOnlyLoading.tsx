@@ -4,33 +4,36 @@
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
-// Dynamically import the LoadingScreen with SSR turned off
 const LoadingScreen = dynamic(() => import('../shared/LoadingScreen'), {
   ssr: false,
 });
 
-const ClientOnlyLoading = () => {
+interface ClientOnlyLoadingProps {
+  onFinished: () => void;
+}
+
+const ClientOnlyLoading = ({ onFinished }: ClientOnlyLoadingProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [show, setShow] = useState(true);
 
   useEffect(() => {
     setIsMounted(true);
 
-    // Hide the loading screen after a delay
-    const timer = setTimeout(() => {
+    const finishTimer = setTimeout(() => {
+      onFinished();
+    }, 1800); // Should be slightly less than hide timer
+
+    const hideTimer = setTimeout(() => {
       setShow(false);
     }, 2000); // 2 seconds
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => {
+      clearTimeout(finishTimer);
+      clearTimeout(hideTimer);
+    };
+  }, [onFinished]);
 
-  // Don't render anything on the server
-  if (!isMounted) {
-    return null;
-  }
-
-  // If show is false, render nothing
-  if (!show) {
+  if (!isMounted || !show) {
     return null;
   }
 
