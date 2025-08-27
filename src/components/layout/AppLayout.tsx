@@ -30,10 +30,12 @@ export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
       <ClientOnlyLoading onFinished={() => setIsLoading(false)} />
+      
       <div className={cn("transition-opacity duration-500", isLoading ? "opacity-0" : "opacity-100")}>
         <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
-            <div className="flex min-h-screen relative">
-              {isClient && (
+          <div className="flex min-h-screen relative">
+            {isClient && (
+              <>
                 <Waves
                   lineColor="hsl(var(--accent))"
                   backgroundColor="transparent"
@@ -47,23 +49,23 @@ export default function AppLayout({ children }: AppLayoutProps) {
                   xGap={12}
                   yGap={36}
                 />
-              )}
-              {isClient && (
                 <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10">
                   <SidebarNav />
                 </Sidebar>
-              )}
-              <SidebarInset className="flex flex-col flex-1 z-10">
-                <HeaderNav />
-                <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
-                  <PageTransition>
-                    {children}
-                  </PageTransition>
-                </main>
-              </SidebarInset>
-            </div>
-            {isClient && <MobileBottomNav className="z-10" />}
-            <Toaster />
+              </>
+            )}
+            
+            <SidebarInset className="flex flex-col flex-1 z-10">
+              <HeaderNav />
+              <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+                <PageTransition>
+                  {children}
+                </PageTransition>
+              </main>
+            </SidebarInset>
+          </div>
+          {isClient && <MobileBottomNav className="z-10" />}
+          <Toaster />
         </SidebarProvider>
       </div>
     </>
