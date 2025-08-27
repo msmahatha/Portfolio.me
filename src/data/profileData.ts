@@ -200,7 +200,7 @@ export const profileData: ProfileData = {
     "Programming Languages": ["Python", "Java", "JavaScript", "SQL"],
     "Frameworks & Libraries": ["Next.js", "React", "Node.js", "Flask", "Streamlit"],
     "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral", "Genkit"],
-    "Databases": ["MongoDB", "SQLite"],
+    "Databases": ["MongoDB", "SQLite", "Supabase"],
     "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git", "IBM Cloud"]
   },
   certifications: [
