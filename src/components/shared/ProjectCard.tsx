@@ -19,8 +19,8 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
           <Image
             src={project.image}
             alt={project.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             data-ai-hint={project.dataAiHint || "project technology"}
           />
         </div>

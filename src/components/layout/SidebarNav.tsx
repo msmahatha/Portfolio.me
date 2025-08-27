@@ -18,8 +18,8 @@ export default function SidebarNav() {
           <Image
             src="https://i.ibb.co/CFGFw2x/Whats-App-Image-2025-03-08-at-22-15-53.jpg"
             alt={profileData.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             data-ai-hint="man profile"
           />
         </div>
