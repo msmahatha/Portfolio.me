@@ -106,3 +106,14 @@ body {
   transform-origin: bottom;
   animation: equalizer-bounce 2.2s ease-in-out infinite;
 }
+
+/* Loading screen fade out animation */
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.loading-screen.is-loaded {
+  animation: fade-out 0.5s forwards;
+  pointer-events: none;
+}
