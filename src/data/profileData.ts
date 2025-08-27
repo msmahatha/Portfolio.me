@@ -201,7 +201,7 @@ export const profileData: ProfileData = {
     "Frameworks & Libraries": ["Next.js", "React", "Node.js", "Flask", "Streamlit"],
     "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral", "Genkit"],
     "Databases": ["MongoDB", "SQLite"],
-    "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git"]
+    "Cloud & DevOps": ["Docker", "Oracle Cloud", "Firebase", "VM management", "Git", "IBM Cloud"]
   },
   certifications: [
     "Intel Unnati Training 2025",
