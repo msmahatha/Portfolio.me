@@ -23,12 +23,9 @@ async function AiPoweredAboutPage() {
     workExperience: profileData.work,
   });
 
-  const aboutTitle = result?.aboutTitle || "About Me";
-  const whatIDoTitle = result?.whatIDoTitle || "What I Do";
-  const aboutMeParagraphs = result?.aboutMeText || [
-    profileData.about.paragraph1,
-    profileData.about.paragraph2,
-  ];
+  const aboutTitle = result.aboutTitle;
+  const whatIDoTitle = result.whatIDoTitle;
+  const aboutMeParagraphs = result.aboutMeText;
 
   return (
     <div className="space-y-12">

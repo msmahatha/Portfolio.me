@@ -44,7 +44,7 @@ const prompt = ai.definePrompt({
   1.  **Generate Creative Titles:**
       -   Create a short, compelling title for the "About Me" section (e.g., "My Story", "Who I Am").
       -   Create a short, compelling title for the "What I Do" section (e.g., "My Focus", "How I Help").
-      -   Each title should be 2-3 words. Do not use quotes in the output.
+      -   Each title MUST be 2-3 words. Do NOT use quotes in the output.
 
   2.  **Generate "About Me" Text:**
       -   Write a compelling, 2-paragraph "About Me" section.
@@ -76,6 +76,20 @@ const generateAboutPageContentFlow = ai.defineFlow(
   },
   async (input) => {
     const {output} = await prompt(input);
-    return output!;
+    if (!output) {
+      // Return a default structure if the AI returns null/undefined
+      return {
+        aboutTitle: "About Me",
+        whatIDoTitle: "What I Do",
+        aboutMeText: [
+          profileData.about.paragraph1,
+          profileData.about.paragraph2,
+        ],
+      };
+    }
+    return output;
   }
 );
+
+// We need to add profileData here to access it in the fallback case.
+import { profileData } from '@/data/profileData';
