@@ -9,6 +9,7 @@ import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from 'next/dynamic';
 import PageTransition from './PageTransition';
+import ClientOnlyLoading from './ClientOnlyLoading';
 
 const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
 
@@ -19,6 +20,7 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <>
+      <ClientOnlyLoading />
       <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
         <div className="flex min-h-screen relative">
           <Waves

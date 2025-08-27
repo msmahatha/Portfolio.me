@@ -92,3 +92,32 @@ body {
     opacity: 0;
   }
 }
+
+/* Loading Screen Animations */
+.animate-pulse-text {
+  animation: pulse-text 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.fade-out-fast {
+  animation: fade-out 0.5s ease-out forwards;
+  animation-delay: 2s; /* Start fade out after 2s */
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
