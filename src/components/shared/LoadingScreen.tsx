@@ -17,18 +17,18 @@ const LoadingScreen = () => {
   const [activeBars, setActiveBars] = useState<number[]>([]);
 
   useEffect(() => {
+    // Set initial state only on the client-side after mount
+    const initialActiveBars = Array.from({ length: numColumns }).map(() =>
+      Math.floor(Math.random() * (numRows + 1))
+    );
+    setActiveBars(initialActiveBars);
+
     const interval = setInterval(() => {
       const newActiveBars = Array.from({ length: numColumns }).map(() =>
         Math.floor(Math.random() * (numRows + 1))
       );
       setActiveBars(newActiveBars);
     }, 200); // Update every 200ms
-
-    // Set initial state
-    const initialActiveBars = Array.from({ length: numColumns }).map(() =>
-      Math.floor(Math.random() * (numRows + 1))
-    );
-    setActiveBars(initialActiveBars);
 
     return () => clearInterval(interval);
   }, [numColumns, numRows]);
@@ -44,7 +44,7 @@ const LoadingScreen = () => {
                 <div
                   key={colIndex}
                   className={`w-3 h-3 rounded-[1px] transition-colors duration-200 ${
-                    activeBars[colIndex] >= numRows - rowIndex
+                    (activeBars[colIndex] ?? 0) >= numRows - rowIndex
                       ? getBarColor(rowIndex)
                       : 'bg-gray-700'
                   }`}
