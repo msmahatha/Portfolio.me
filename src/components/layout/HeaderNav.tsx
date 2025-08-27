@@ -12,7 +12,6 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/resume', label: 'Resume' },
-  { href: '/testimonials', label: 'Testimonials' },
 ];
 
 export default function HeaderNav() {
