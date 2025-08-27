@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 }
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
-  const { name, company, message, createdAt } = testimonial;
+  const { name, email, message, createdAt } = testimonial;
   const initial = name.charAt(0).toUpperCase();
 
   return (
@@ -20,7 +20,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         </Avatar>
         <div className="flex-1">
             <p className="font-semibold text-card-foreground">{name}</p>
-            {company && <p className="text-sm text-muted-foreground">{company}</p>}
+            {email && <p className="text-sm text-muted-foreground">{email}</p>}
         </div>
       </CardHeader>
       <CardContent className="flex-grow">

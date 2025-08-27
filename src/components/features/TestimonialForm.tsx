@@ -17,7 +17,7 @@ import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
     name: z.string().min(2, "Name is required."),
-    company: z.string().optional(),
+    email: z.string().email("Please enter a valid email.").optional(),
     message: z.string().min(10, "Please write a longer testimonial."),
 });
 
@@ -29,7 +29,7 @@ export default function TestimonialForm() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: "",
-            company: "",
+            email: "",
             message: "",
         },
     });
@@ -71,12 +71,12 @@ export default function TestimonialForm() {
                 />
                 <FormField
                     control={form.control}
-                    name="company"
+                    name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Your Company/Title (Optional)</FormLabel>
+                            <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="e.g., CEO at Innovate Inc." {...field} />
+                                <Input placeholder="e.g., jane@example.com" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

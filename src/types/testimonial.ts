@@ -1,7 +1,7 @@
 
 export interface TestimonialSubmission {
   name: string;
-  company?: string;
+  email?: string;
   message: string;
 }
 

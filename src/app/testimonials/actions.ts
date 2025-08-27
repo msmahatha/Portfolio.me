@@ -10,7 +10,7 @@ import { z } from 'zod';
 
 const submissionSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
-    company: z.string().optional(),
+    email: z.string().email("Invalid email format.").optional().or(z.literal('')),
     message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message cannot exceed 500 characters."),
 });
 
@@ -52,7 +52,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
             testimonials.push({
                 id: doc.id,
                 name: data.name,
-                company: data.company,
+                email: data.email,
                 message: data.message,
                 createdAt: data.createdAt?.toDate().toISOString() || new Date().toISOString(),
                 approved: data.approved,
