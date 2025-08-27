@@ -1,7 +1,7 @@
-import { Pencil, Code2, Smartphone, Camera, Cpu, Briefcase, LucideProps, Icon as LucideIcon } from 'lucide-react';
+import { Pencil, Code2, Smartphone, Camera, Cpu, Briefcase, LucideProps } from 'lucide-react';
 import type { ElementType } from 'react';
 
-export const iconMap: { [key: string]: LucideIcon } = {
+export const iconMap: { [key: string]: ElementType } = {
   pencil: Pencil,
   code: Code2,
   smartphone: Smartphone,
