@@ -349,5 +349,3 @@ const Waves: FC<WavesProps> = ({
 }
 
 export default Waves;
-
-    
