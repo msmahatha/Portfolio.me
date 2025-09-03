@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import type { ProjectItem } from '@/types/profile';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -55,20 +55,32 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
       {hasLinks && (
         <CardFooter className="flex items-center gap-2 mt-auto pt-4">
           {project.link && (
-            <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30" asChild>
-              <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Link>
-            </Button>
+            <Link 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30"
+              )}
+            >
+              <Github className="w-4 h-4 mr-2" />
+              GitHub
+            </Link>
           )}
           {project.liveLink && (
-            <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30" asChild>
-              <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Live
-              </Link>
-            </Button>
+            <Link 
+              href={project.liveLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "sm" }),
+                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30"
+              )}
+            >
+              <ExternalLink className="w-4 h-4 mr-2" />
+              View Live
+            </Link>
           )}
         </CardFooter>
       )}
