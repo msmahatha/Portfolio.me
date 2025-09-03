@@ -12,6 +12,12 @@ export interface WhatIDoItem {
   text: string;
 }
 
+export interface ExpertiseItem {
+  icon: string;
+  title: string;
+  text: string;
+}
+
 export interface EducationItem {
   degree: string;
   period: string;
@@ -44,10 +50,11 @@ export interface ProfileData {
   location: string;
   about: {
     paragraph1: string;
-    paragraph2: string;
+    paragraph2?: string;
     paragraph3?: string;
   };
   whatIDo: WhatIDoItem[];
+  expertise: ExpertiseItem[];
   education: EducationItem[];
   work: WorkItem[];
   projects: ProjectItem[];

@@ -1,4 +1,4 @@
-import { Pencil, Code2, Smartphone, Camera, Cpu, Briefcase, LucideProps } from 'lucide-react';
+import { Pencil, Code2, Smartphone, Camera, Cpu, Briefcase, BrainCircuit, Server, Cloud, Users, LucideProps } from 'lucide-react';
 import type { ElementType } from 'react';
 
 export const iconMap: { [key: string]: ElementType } = {
@@ -8,6 +8,10 @@ export const iconMap: { [key: string]: ElementType } = {
   camera: Camera,
   cpu: Cpu,
   briefcase: Briefcase,
+  brainCircuit: BrainCircuit,
+  server: Server,
+  cloud: Cloud,
+  users: Users,
 };
 
 interface IconProps extends LucideProps {

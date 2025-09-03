@@ -9,7 +9,6 @@ export const profileData: ProfileData = {
   location: "Kolkata, West Bengal, India",
   about: {
     paragraph1: "I’m a passionate Full Stack Developer with a strong focus on Applied Artificial Intelligence and End-to-End System Architecture. I specialize in building scalable web applications and intelligent systems that bridge real-world problems with AI-powered solutions.",
-    paragraph2: "I thrive at the intersection of creativity and logic for crafting seamless user experiences backed by robust, efficient code. My work includes deploying groundwater prediction models using LSTM, developing a context-aware movie recommendation system, and leading innovation in edge-device deployments for AI-driven comic generation.  Currently, I’m expanding my expertise in cloud integration, real-time systems, and AI-human interaction interfaces, while continuously refining my skills in technologies like React, Node.js, MongoDB, Python, and OpenCV.",
     paragraph3: "Always learning. Always building."
   },
   whatIDo: [
@@ -17,6 +16,12 @@ export const profileData: ProfileData = {
     { icon: "code",    title: "Web Development", text: "Building high-quality, scalable websites & APIs." },
     { icon: "cpu", title: "Automations", text: "Developing intelligent automation solutions to streamline processes and enhance efficiency, such as reducing manual data processing by 25% through AI systems." },
     { icon: "briefcase",  title: "Real World Solutions", text: "Architecting practical and impactful solutions, like an ML model improving groundwater level prediction by 85%, for complex real-world challenges." }
+  ],
+  expertise: [
+    { icon: "brainCircuit", title: "AI Model Deployment", text: "Deploying complex models like LSTMs for groundwater prediction and creating context-aware recommendation systems." },
+    { icon: "server", title: "End-to-End Systems", text: "Leading innovation in edge-device deployments for AI-driven comic generation and building full-stack applications." },
+    { icon: "cloud", title: "Cloud Integration", text: "Expanding my expertise in cloud integration, real-time systems, and scalable backend architecture." },
+    { icon: "users", title: "Human-AI Interaction", text: "Refining skills in creating intuitive interfaces for complex AI systems using React, Node.js, and Python." }
   ],
   education: [
     {
