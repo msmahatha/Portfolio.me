@@ -53,7 +53,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
       </CardContent>
       {hasLinks && (
-        <CardFooter className="flex items-center gap-2 mt-auto pt-4">
+        <CardFooter className="flex items-center gap-2 mt-auto pt-4 relative z-10">
           {project.link && (
             <Link 
               href={project.link} 
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
               rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
-                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30"
+                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30 z-10"
               )}
             >
               <Github className="w-4 h-4 mr-2" />
@@ -75,7 +75,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
               rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ variant: "outline", size: "sm" }),
-                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30"
+                "transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30 z-10"
               )}
             >
               <ExternalLink className="w-4 h-4 mr-2" />
