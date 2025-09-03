@@ -224,6 +224,8 @@ export const profileData: ProfileData = {
     github: "https://github.com/msmahatha/",
     linkedin: "https://www.linkedin.com/in/msmahatha/",
     instagram: "https://www.instagram.com/msmahatha/",
-    x: "https://x.com/msmahatha"
+    x: "https://x.com/msmahatha",
+    leetcode: "https://leetcode.com/u/your-username/",
+    geeksforgeeks: "https://auth.geeksforgeeks.org/user/your-username"
   }
 };

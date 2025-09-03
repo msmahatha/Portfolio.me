@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, MapPin, Phone, Instagram, X } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Instagram, X, Code2 } from 'lucide-react';
 import { profileData } from '@/data/profileData';
 import { SidebarHeader, SidebarContent, SidebarGroup, SidebarGroupLabel } from '@/components/ui/sidebar';
 import { Separator } from '@/components/ui/separator';
@@ -71,7 +71,7 @@ export default function SidebarNav() {
 
         <SidebarGroup>
           <SidebarGroupLabel>Social</SidebarGroupLabel>
-          <div className="flex justify-around group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-y-4">
+          <div className="flex flex-wrap justify-around gap-y-4 group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-y-4">
             <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
@@ -83,6 +83,12 @@ export default function SidebarNav() {
             </Link>
             <Link href={profileData.social.x} target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
               <X className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+            </Link>
+            <Link href={profileData.social.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode" title="LeetCode">
+              <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+            </Link>
+            <Link href={profileData.social.geeksforgeeks} target="_blank" rel="noopener noreferrer" aria-label="GeeksforGeeks" title="GeeksforGeeks">
+              <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
           </div>
         </SidebarGroup>

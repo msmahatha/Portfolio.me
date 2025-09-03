@@ -4,6 +4,8 @@ export interface SocialLinks {
   linkedin: string;
   instagram: string;
   x: string;
+  leetcode: string;
+  geeksforgeeks: string;
 }
 
 export interface WhatIDoItem {
