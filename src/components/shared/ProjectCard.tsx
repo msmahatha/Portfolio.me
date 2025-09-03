@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
       "bg-card shadow-lg h-full flex flex-col overflow-hidden",
       "transition-all duration-300 ease-in-out transform group",
       "relative", // Needed for the pseudo-element
-      "hover:scale-105",
+      "hover:scale-110 hover:shadow-xl hover:shadow-accent/20", // Enhanced hover effect
       // The pseudo-element for the glowing effect
       "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2",
       "after:w-[150%] after:h-2/5 after:bg-purple-500 after:opacity-0 after:blur-3xl",
