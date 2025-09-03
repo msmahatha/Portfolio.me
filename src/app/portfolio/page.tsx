@@ -44,17 +44,12 @@ export default function PortfolioPage() {
           </Button>
         ))}
       </div>
-      <motion.div
-        layout
+      <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
       >
         {filteredProjects.map((project) => (
           <motion.div
             key={project.name}
-            layout
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
@@ -62,7 +57,7 @@ export default function PortfolioPage() {
             <ProjectCard project={project} />
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </SectionWrapper>
   );
 }
