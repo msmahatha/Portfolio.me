@@ -120,7 +120,7 @@ body {
     --popover-foreground: 0 0% 3.9%;
 
     --primary: 220 90% 55%; /* #3b82f6 - Blue */
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 98%; /* Light text on primary */
 
     --secondary: 0 0% 96.1%; /* #f5f5f5 */
     --secondary-foreground: 0 0% 9%;
@@ -128,8 +128,8 @@ body {
     --muted: 0 0% 94%;
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 220 90% 60%; /* Lighter Blue */
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 92.2%; /* Lighter gray for hover */
+    --accent-foreground: 0 0% 9%; /* Dark text on hover */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
