@@ -101,7 +101,16 @@ export default function SidebarNav() {
             </Link>
             {profileData.social.codeforces && (
               <Link href={profileData.social.codeforces} target="_blank" rel="noopener noreferrer" aria-label="Codeforces" title="Codeforces">
-                <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 text-foreground hover:text-accent transition-colors"
+                  fill="currentColor"
+                >
+                  <title>Codeforces</title>
+                  <path d="M4 18H6V6H4V18ZM8 18H10V10H8V18ZM12 18H14V4H12V18ZM16 18H18V12H16V18Z" />
+                </svg>
               </Link>
             )}
           </div>
@@ -110,5 +119,3 @@ export default function SidebarNav() {
     </>
   );
 }
-
-    
