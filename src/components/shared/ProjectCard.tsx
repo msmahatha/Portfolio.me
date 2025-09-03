@@ -13,18 +13,17 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
   const hasLinks = project.link || project.liveLink;
 
   return (
-    <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-all duration-300 ease-in-out hover:scale-105 transform">
-      {project.image && (
-        <div className="relative w-full h-48">
-          <Image
-            src={project.image}
-            alt={project.name}
-            fill
-            className="object-cover"
-            data-ai-hint={project.dataAiHint || "project technology"}
-          />
-        </div>
-      )}
+    <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-all duration-300 ease-in-out hover:scale-105 transform group">
+      <div className="relative w-full h-48 overflow-hidden">
+        <Image
+          src={project.image || 'https://placehold.co/600x400/0f0f0f/FFCC38?text=Project'}
+          alt={project.name}
+          fill
+          className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          data-ai-hint={project.dataAiHint || "project technology"}
+        />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
+      </div>
       <CardHeader>
         <CardTitle className="text-xl font-semibold">{project.name}</CardTitle>
         <CardDescription className="text-xs">{project.period}</CardDescription>

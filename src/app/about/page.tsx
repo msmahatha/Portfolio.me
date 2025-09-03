@@ -4,6 +4,7 @@ import { profileData } from '@/data/profileData';
 
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import WhatIDoSection from '@/components/features/WhatIDoSection';
+import TypingEffect from '@/components/shared/TypingEffect';
 
 export const metadata: Metadata = {
   title: 'About | Madhusudan Mahatha',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="space-y-12">
-      <SectionWrapper title="About Me">
+      <SectionWrapper title={<TypingEffect text="About Me" />}>
         <div className="space-y-4 text-foreground/90 leading-relaxed">
           <p>{profileData.about.paragraph1}</p>
           <p>{profileData.about.paragraph2}</p>
