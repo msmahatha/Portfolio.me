@@ -71,7 +71,7 @@ export default function SidebarNav() {
 
         <SidebarGroup>
           <SidebarGroupLabel>Social</SidebarGroupLabel>
-          <div className="flex flex-wrap justify-around gap-y-4 group-data-[state=collapsed]:flex-col group-data-[state=collapsed]:space-y-4">
+          <div className="grid grid-cols-4 justify-items-center gap-y-4 group-data-[state=collapsed]:grid-cols-1 group-data-[state=collapsed]:space-y-4">
             <Link href={profileData.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
               <Github className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
@@ -105,7 +105,13 @@ export default function SidebarNav() {
                   className="w-6 h-6"
                 >
                   <title>Codeforces</title>
-                  <path d="M4.03 18.32c.23 0 .4-.17.4-.4v-8.3c0-.23-.17-.4-.4-.4s-.4.17-.4.4v8.3c0 .23.17.4.4.4z" fill="#00f"></path><path d="M7.67 18.32c.23 0 .4-.17.4-.4V9.28c0-.23-.17-.4-.4-.4s-.4.17-.4.4v8.64c0 .23.17.4.4.4z" fill="#00f"></path><path d="m13.47 10.39-2.04 2.04-2.04-2.04c-.16-.16-.4-.16-.56 0-.16.16-.16.4 0 .56l2.32 2.32c.08.08.18.12.28.12s.2-.04.28-.12l2.32-2.32c.16-.16.16-.4 0-.56-.16-.16-.4-.16-.56 0z" fill="#000"></path><path d="M11.31 18.32c.23 0 .4-.17.4-.4V5.68c0-.23-.17-.4-.4-.4s-.4.17-.4.4v12.24c0 .23.17.4.4.4z" fill="#f00"></path><path d="M15.01 18.32c.23 0 .4-.17.4-.4v-5.2c0-.23-.17-.4-.4-.4s-.4.17-.4.4v5.2c0 .23.17.4.4.4z" fill="#00f"></path><path d="m21.57 6.24-3.21-3.21c-.16-.16-.4-.16-.56 0s-.16.4 0 .56l3.21 3.21c.16.16.4.16.56 0s.16-.4 0-.56z" fill="#000"></path><path d="M18.92 18.32c.23 0 .4-.17.4-.4V3.68c0-.23-.17-.4-.4-.4s-.4.17-.4.4v14.24c0 .23.17.4.4.4z" fill="#00f"></path>
+                  <path d="M4.03 18.32c.23 0 .4-.17.4-.4v-8.3c0-.23-.17-.4-.4-.4s-.4.17-.4.4v8.3c0 .23.17.4.4.4z" fill="#00f"></path>
+                  <path d="M7.67 18.32c.23 0 .4-.17.4-.4V9.28c0-.23-.17-.4-.4-.4s-.4.17-.4.4v8.64c0 .23.17.4.4.4z" fill="#00f"></path>
+                  <path d="m13.47 10.39-2.04 2.04-2.04-2.04c-.16-.16-.4-.16-.56 0-.16.16-.16.4 0 .56l2.32 2.32c.08.08.18.12.28.12s.2-.04.28-.12l2.32-2.32c.16-.16.16-.4 0-.56-.16-.16-.4-.16-.56 0z" fill="#000"></path>
+                  <path d="M11.31 18.32c.23 0 .4-.17.4-.4V5.68c0-.23-.17-.4-.4-.4s-.4.17-.4.4v12.24c0 .23.17.4.4.4z" fill="#f00"></path>
+                  <path d="M15.01 18.32c.23 0 .4-.17.4-.4v-5.2c0-.23-.17-.4-.4-.4s-.4.17-.4.4v5.2c0 .23.17.4.4.4z" fill="#00f"></path>
+                  <path d="m21.57 6.24-3.21-3.21c-.16-.16-.4-.16-.56 0s-.16.4 0 .56l3.21 3.21c.16.16.4.16.56 0s.16-.4 0-.56z" fill="#000"></path>
+                  <path d="M18.92 18.32c.23 0 .4-.17.4-.4V3.68c0-.23-.17-.4-.4-.4s-.4.17-.4.4v14.24c0 .23.17.4.4.4z" fill="#00f"></path>
                 </svg>
               </Link>
             )}
@@ -115,5 +121,3 @@ export default function SidebarNav() {
     </>
   );
 }
-
-    
