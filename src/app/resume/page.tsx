@@ -50,14 +50,14 @@ export default function ResumePage() {
           {/* Projects */}
           <div className="glass-card p-6 md:p-8">
             <h3 className="text-2xl font-semibold mb-4 text-accent">Projects</h3>
-            {projects.slice(0, 3).map((item, index) => ( // Show first 3 projects
+            {projects.map((item, index) => ( 
               <TimelineItem
                 key={item.name}
                 title={item.name}
                 subtitle={`Tech: ${item.tech}`}
                 period={item.period}
                 details={item.highlights}
-                isLast={index === projects.slice(0, 3).length - 1}
+                isLast={index === projects.length - 1}
               />
             ))}
           </div>
