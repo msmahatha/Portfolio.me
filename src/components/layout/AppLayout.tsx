@@ -2,7 +2,6 @@
 "use client";
 
 import type { ReactNode } from 'react';
-import { useState } from 'react';
 import { SidebarProvider, Sidebar, SidebarInset } from "@/components/ui/sidebar";
 import SidebarNav from "@/components/layout/SidebarNav";
 import HeaderNav from "@/components/layout/HeaderNav";
@@ -12,7 +11,6 @@ import dynamic from 'next/dynamic';
 import PageTransition from './PageTransition';
 import { cn } from '@/lib/utils';
 import { useIsMounted } from '@/hooks/useIsMounted';
-import ClientOnlyLoading from './ClientOnlyLoading';
 
 // Dynamically import client-side only components
 const Waves = dynamic(() => import('@/components/shared/Waves'), { ssr: false });
@@ -23,13 +21,11 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   const isMounted = useIsMounted();
-  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
-      <ClientOnlyLoading onFinished={() => setIsLoading(false)} />
-      
-      <div className={cn("transition-opacity duration-500", !isMounted || isLoading ? "opacity-0" : "opacity-100")}>
+      {/* The loading screen is now primarily handled by ClientOnlyLoading in the root layout */}
+      <div className={cn("transition-opacity duration-500", isMounted ? "opacity-100" : "opacity-0")}>
         <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
           <div className="flex min-h-screen relative">
             <Waves
