@@ -225,7 +225,10 @@ export const profileData: ProfileData = {
     linkedin: "https://www.linkedin.com/in/msmahatha/",
     instagram: "https://www.instagram.com/msmahatha/",
     x: "https://x.com/msmahatha",
-    leetcode: "https://leetcode.com/u/your-username/",
-    geeksforgeeks: "https://auth.geeksforgeeks.org/user/your-username"
+    leetcode: "https://leetcode.com/u/msmahatha/",
+    geeksforgeeks: "https://auth.geeksforgeeks.org/user/your-username",
+    codeforces: "https://codeforces.com/profile/msmahatha007"
   }
 };
+
+    

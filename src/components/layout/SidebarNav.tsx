@@ -90,9 +90,16 @@ export default function SidebarNav() {
             <Link href={profileData.social.geeksforgeeks} target="_blank" rel="noopener noreferrer" aria-label="GeeksforGeeks" title="GeeksforGeeks">
               <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
+            {profileData.social.codeforces && (
+              <Link href={profileData.social.codeforces} target="_blank" rel="noopener noreferrer" aria-label="Codeforces" title="Codeforces">
+                <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+              </Link>
+            )}
           </div>
         </SidebarGroup>
       </SidebarContent>
     </>
   );
 }
+
+    

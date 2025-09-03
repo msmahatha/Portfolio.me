@@ -6,6 +6,7 @@ export interface SocialLinks {
   x: string;
   leetcode: string;
   geeksforgeeks: string;
+  codeforces?: string;
 }
 
 export interface WhatIDoItem {
@@ -67,3 +68,5 @@ export interface ProfileData {
   extras: string[];
   social: SocialLinks;
 }
+
+    
