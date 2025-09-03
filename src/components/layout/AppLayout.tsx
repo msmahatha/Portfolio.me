@@ -8,7 +8,6 @@ import HeaderNav from "@/components/layout/HeaderNav";
 import MobileBottomNav from "@/components/layout/MobileBottomNav";
 import { Toaster } from "@/components/ui/toaster";
 import dynamic from 'next/dynamic';
-import PageTransition from './PageTransition';
 import { cn } from '@/lib/utils';
 import { useIsMounted } from '@/hooks/useIsMounted';
 
@@ -48,9 +47,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             <SidebarInset className="flex flex-col flex-1 z-10">
               <HeaderNav />
               <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
-                <PageTransition>
-                  {children}
-                </PageTransition>
+                {children}
               </main>
             </SidebarInset>
           </div>

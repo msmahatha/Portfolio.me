@@ -1,3 +1,4 @@
+
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,7 +23,7 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'anticipate',
-  duration: 0.4,
+  duration: 0.5,
 };
 
 const PageTransition = ({ children }: { children: ReactNode }) => {
@@ -31,7 +32,6 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        suppressHydrationWarning // Add this prop
         key={pathname}
         initial="initial"
         animate="in"

@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { profileData } from '@/data/profileData';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import ProjectCard from '@/components/shared/ProjectCard';
@@ -44,20 +44,24 @@ export default function PortfolioPage() {
           </Button>
         ))}
       </div>
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <AnimatePresence>
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+      <motion.div
+        layout
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {filteredProjects.map((project) => (
+          <motion.div
+            key={project.name}
+            layout
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ProjectCard project={project} />
+          </motion.div>
+        ))}
       </motion.div>
     </SectionWrapper>
   );
