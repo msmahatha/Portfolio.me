@@ -15,6 +15,9 @@ const geistSans = Geist({ // Using default Geist (sans-serif)
 export const metadata: Metadata = {
   title: 'Madhusudan Mahatha',
   description: 'Personal portfolio of Madhusudan Mahatha, Full Stack Developer & AI/ML Specialist.',
+  icons: {
+    icon: 'https://i.ibb.co/CFGFw2x/Whats-App-Image-2025-03-08-at-22-15-53.jpg',
+  },
 };
 
 export default function RootLayout({
