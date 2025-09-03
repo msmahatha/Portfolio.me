@@ -5,7 +5,6 @@ import './globals.css';
 import AppLayout from '@/components/layout/AppLayout';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 import ClientOnlyLoading from '@/components/layout/ClientOnlyLoading';
-import PageTransition from '@/components/layout/PageTransition';
 
 const geistSans = Geist({ // Using default Geist (sans-serif)
   variable: '--font-geist-sans',
@@ -38,9 +37,7 @@ export default function RootLayout({
         >
           <ClientOnlyLoading />
           <AppLayout>
-            <PageTransition>
-              {children}
-            </PageTransition>
+            {children}
           </AppLayout>
         </ThemeProvider>
       </body>
