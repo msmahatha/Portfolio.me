@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
       "bg-card shadow-lg h-full flex flex-col overflow-hidden",
       "transition-all duration-300 ease-in-out transform group",
       "relative", // Needed for the pseudo-element
-      "hover:scale-110 hover:shadow-xl hover:shadow-accent/20", // Enhanced hover effect
+      "hover:scale-105 hover:shadow-xl hover:shadow-accent/20", // Enhanced hover effect
       // The pseudo-element for the glowing effect
       "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2",
       "after:w-[150%] after:h-2/5 after:bg-purple-500 after:opacity-0 after:blur-3xl",
@@ -55,20 +55,20 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
       {hasLinks && (
         <CardFooter className="flex items-center gap-2 mt-auto pt-4">
           {project.link && (
-            <Button variant="outline" size="sm" asChild className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
-              <Link href={project.link} target="_blank" rel="noopener noreferrer">
+            <Link href={project.link} target="_blank" rel="noopener noreferrer" passHref>
+              <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           {project.liveLink && (
-            <Button variant="outline" size="sm" asChild className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
-              <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+            <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" passHref>
+              <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
         </CardFooter>
       )}
