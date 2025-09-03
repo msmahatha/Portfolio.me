@@ -79,24 +79,24 @@ export default function ResumePage() {
             </div>
           </div>
 
-          {/* Certifications & Extras */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass-card p-6 md:p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-accent">Certifications</h3>
-              <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                {certifications.map((cert) => (
-                  <li key={cert}>{cert}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="glass-card p-6 md:p-8">
-              <h3 className="text-2xl font-semibold mb-4 text-accent">Extras</h3>
-              <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                {extras.map((extra) => (
-                  <li key={extra}>{extra}</li>
-                ))}
-              </ul>
-            </div>
+          {/* Certifications */}
+          <div className="glass-card p-6 md:p-8">
+            <h3 className="text-2xl font-semibold mb-4 text-accent">Certifications</h3>
+            <ul className="list-disc list-inside space-y-2 text-foreground/80">
+              {certifications.map((cert) => (
+                <li key={cert}>{cert}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Extras */}
+          <div className="glass-card p-6 md:p-8">
+            <h3 className="text-2xl font-semibold mb-4 text-accent">Extras</h3>
+            <ul className="list-disc list-inside space-y-2 text-foreground/80">
+              {extras.map((extra) => (
+                <li key={extra}>{extra}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </SectionWrapper>
