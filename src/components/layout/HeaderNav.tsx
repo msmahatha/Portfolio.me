@@ -7,6 +7,7 @@ import { SidebarTrigger } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
+import { ThemeSwitcher } from '@/components/layout/ThemeSwitcher';
 
 const navLinks = [
   { href: '/about', label: 'About' },
@@ -34,28 +35,31 @@ export default function HeaderNav() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-          {navLinks.map((link) => {
-            const isActive = isClient && pathname === link.href;
-            return (
-              <Button
-                key={link.href}
-                variant="ghost"
-                asChild
-                className={cn(
-                  "text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                )}
-              >
-                <Link href={link.href} className="flex items-center gap-2">
-                  {link.label}
-                </Link>
-              </Button>
-            );
-          })}
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
+            {navLinks.map((link) => {
+              const isActive = isClient && pathname === link.href;
+              return (
+                <Button
+                  key={link.href}
+                  variant="ghost"
+                  asChild
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    isActive
+                      ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  )}
+                >
+                  <Link href={link.href} className="flex items-center gap-2">
+                    {link.label}
+                  </Link>
+                </Button>
+              );
+            })}
+          </nav>
+          <ThemeSwitcher />
+        </div>
       </div>
     </header>
   );

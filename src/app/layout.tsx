@@ -4,6 +4,7 @@ import { Geist } from 'next/font/google'; // Corrected import for Geist
 import './globals.css';
 import AppLayout from '@/components/layout/AppLayout';
 import ClientOnlyLoading from '@/components/layout/ClientOnlyLoading';
+import { ThemeProvider } from '@/components/layout/ThemeProvider';
 
 const geistSans = Geist({ // Using default Geist (sans-serif)
   variable: '--font-geist-sans',
@@ -24,7 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.variable} suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
-        <AppLayout>{children}</AppLayout>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClientOnlyLoading />
+          <AppLayout>{children}</AppLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
