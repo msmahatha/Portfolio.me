@@ -55,20 +55,20 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
       {hasLinks && (
         <CardFooter className="flex items-center gap-2 mt-auto pt-4">
           {project.link && (
-            <Link href={project.link} target="_blank" rel="noopener noreferrer" passHref>
-              <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
+            <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30" asChild>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           )}
           {project.liveLink && (
-            <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" passHref>
-              <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30">
+            <Button variant="outline" size="sm" className="transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-accent/30" asChild>
+              <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           )}
         </CardFooter>
       )}
