@@ -6,6 +6,7 @@ import type { ProjectItem } from '@/types/profile';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function ProjectCard({ project }: { project: ProjectItem }) {
   const techArray = project.tech.split(',').map(t => t.trim());
@@ -13,7 +14,17 @@ export default function ProjectCard({ project }: { project: ProjectItem }) {
   const hasLinks = project.link || project.liveLink;
 
   return (
-    <Card className="bg-card shadow-lg h-full flex flex-col overflow-hidden hover:shadow-accent/20 transition-all duration-300 ease-in-out hover:scale-105 transform group">
+    <Card className={cn(
+      "bg-card shadow-lg h-full flex flex-col overflow-hidden",
+      "transition-all duration-300 ease-in-out transform group",
+      "relative", // Needed for the pseudo-element
+      "hover:scale-105",
+      // The pseudo-element for the glowing effect
+      "after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2",
+      "after:w-[150%] after:h-2/5 after:bg-accent after:opacity-0 after:blur-3xl",
+      "after:transition-opacity after:duration-500",
+      "group-hover:after:opacity-20"
+    )}>
       <div className="relative w-full h-48 overflow-hidden">
         <Image
           src={project.image || 'https://placehold.co/600x400/0f0f0f/FFCC38?text=Project'}
