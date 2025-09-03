@@ -54,7 +54,7 @@ export const profileData: ProfileData = {
     {
       name: "Cursor for 2D Animation",
       period: "Mar 2025 – Apr 2025",
-      tech: "Python, Manim, React.js, Node.js, Express.js, Google Gemini API, JavaScript, Tailwind CSS",
+      tech: "Python, Manim, React.js, Node.js, Express.js, Google Gemini API, JavaScript, Tailwind CSS, AI/ML",
       highlights: [
         "Engineered full-stack application converting natural language prompts into animated videos using AI-powered code generation.",
         "Integrated Google Gemini API for intelligent Python/Manim code generation from user input.",
@@ -68,7 +68,7 @@ export const profileData: ProfileData = {
     {
       name: "Website Cloner",
       period: "Jan 2025 - Present",
-      tech: "Next.js, AI, HTML, CSS, JavaScript, Tailwind CSS",
+      tech: "Next.js, AI/ML, HTML, CSS, JavaScript, Tailwind CSS",
       highlights: [
         "Leverages AI for a self-healing backend.",
         "Provides real-time analysis of any website's HTML, CSS, and JavaScript.",
@@ -83,7 +83,7 @@ export const profileData: ProfileData = {
     {
       name: "Groundwater Level Predictor",
       period: "Sept 2024 – Present",
-      tech: "Python, TensorFlow, LSTM, Pandas, NumPy, scikit-learn",
+      tech: "Python, TensorFlow, LSTM, Pandas, NumPy, scikit-learn, AI/ML",
       highlights: [
         "Built LSTM model predicting groundwater levels with 85% accuracy.",
         "Integrated crop-recommendation module for water-table sustainability."
@@ -96,7 +96,7 @@ export const profileData: ProfileData = {
     {
       name: "Web File Sharing Platform",
       period: "Nov 2024 – Dec 2024",
-      tech: "Next.js, Firebase Storage, Firebase Auth, Tailwind CSS, TypeScript",
+      tech: "Next.js, Firebase Storage, Firebase Auth, Tailwind CSS, TypeScript, Firebase",
       highlights: [
         "Developed a secure web platform for easy file uploads, downloads, and sharing.",
         "Implemented user authentication and role-based access control for file permissions.",
@@ -109,7 +109,7 @@ export const profileData: ProfileData = {
     {
       name: "Ambient Movie Recommendation System",
       period: "Oct 2024 – Nov 2024",
-      tech: "Python, TensorFlow, Flask, scikit-learn, OpenWeather API",
+      tech: "Python, TensorFlow, Flask, scikit-learn, OpenWeather API, AI/ML",
       highlights: [
         "Recommends movies using mood, weather, trends & socio-political data with 90% accuracy.",
         "Delivered dynamic filtering algorithms & interactive Flask UI."
@@ -121,7 +121,7 @@ export const profileData: ProfileData = {
     {
       name: "AI Comic Creator “ComicCrafter”",
       period: "Feb 2025 – Mar 2025",
-      tech: "Python, Llama, Mistral, Stable Diffusion, Streamlit",
+      tech: "Python, Llama, Mistral, Stable Diffusion, Streamlit, AI/ML",
       highlights: [
         "Locally deployed multimodal comic generator with real-time editing.",
         "Optimised for Intel-based edge devices, reducing latency by 35%."
@@ -133,7 +133,7 @@ export const profileData: ProfileData = {
     {
       name: "Facial Recognition Attendance System",
       period: "Jan 2024 – Feb 2024",
-      tech: "Python, OpenCV, Dlib, Flask, SQLite",
+      tech: "Python, OpenCV, Dlib, Flask, SQLite, AI/ML",
       highlights: [
         "Developed a system to automate attendance tracking using facial recognition.",
         "Achieved 95% accuracy in identifying individuals in varied lighting conditions.",
@@ -145,7 +145,7 @@ export const profileData: ProfileData = {
     {
       name: "AI Text Summarizer",
       period: "Dec 2023 – Jan 2024",
-      tech: "Python, NLTK, spaCy, Transformers, Flask",
+      tech: "Python, NLTK, spaCy, Transformers, Flask, AI/ML",
       highlights: [
         "Developed an extractive and abstractive text summarization tool.",
         "Achieved a ROUGE score of 0.45 on benchmark datasets.",
@@ -157,7 +157,7 @@ export const profileData: ProfileData = {
     {
       name: "TruthGuard - Fact Checking Website",
       period: "Jan 2025 – Feb 2025",
-      tech: "Next.js, Genkit (Gemini), Firebase, Tailwind CSS, TypeScript",
+      tech: "Next.js, Genkit (Gemini), Firebase, Tailwind CSS, TypeScript, AI/ML",
       highlights: [
         "Developed an AI-powered fact-checking website to combat misinformation.",
         "Utilized Genkit with Gemini for natural language processing and claim verification.",
@@ -197,7 +197,7 @@ export const profileData: ProfileData = {
     }
   ],
   skills: {
-    "Programming Languages": ["Python", "Java", "JavaScript", "SQL"],
+    "Programming Languages": ["Python", "Java", "JavaScript", "SQL", "TypeScript"],
     "Frameworks & Libraries": ["Next.js", "React", "Node.js", "Flask", "Streamlit"],
     "AI/ML": ["OpenCV", "scikit-learn", "LSTM", "Neural Networks", "TensorFlow", "Pandas", "NumPy", "Stable Diffusion", "Llama", "Mistral", "Genkit"],
     "Databases": ["MongoDB", "SQLite", "Supabase"],
