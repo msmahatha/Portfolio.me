@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -12,16 +11,26 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useIsMounted } from "@/hooks/useIsMounted"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export function ThemeSwitcher() {
   const { setTheme, theme } = useTheme()
+  const isMounted = useIsMounted()
+
+  if (!isMounted) {
+    return <Skeleton className="w-10 h-10 rounded-md" />
+  }
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          {theme === "day" ? (
+             <Sun className="h-[1.2rem] w-[1.2rem] transition-all" />
+          ) : (
+             <Moon className="h-[1.2rem] w-[1.2rem] transition-all" />
+          )}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
