@@ -186,3 +186,10 @@ body {
     box-shadow: 0 0 3px hsl(var(--primary)), 0 0 5px hsl(var(--primary)), 0 0 8px hsl(var(--primary));
   }
 }
+
+/* Glassmorphism card for royal texture */
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-lg border border-white/10 shadow-lg rounded-xl;
+  }
+}

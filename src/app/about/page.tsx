@@ -13,18 +13,24 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="space-y-12">
-      <SectionWrapper title={<TypingEffect text="About Me" />}>
-        <div className="space-y-4 text-foreground/90 leading-relaxed">
-          <p>{profileData.about.paragraph1}</p>
-          <p>{profileData.about.paragraph2}</p>
-          {profileData.about.paragraph3 && <p>{profileData.about.paragraph3}</p>}
-        </div>
-      </SectionWrapper>
+    <div className="space-y-8">
+      {/* About Me Section with Glassmorphism */}
+      <div className="glass-card p-6 md:p-8">
+        <SectionWrapper title={<TypingEffect text="About Me" />} className="py-0">
+          <div className="space-y-4 text-foreground/90 leading-relaxed">
+            <p>{profileData.about.paragraph1}</p>
+            <p>{profileData.about.paragraph2}</p>
+            {profileData.about.paragraph3 && <p>{profileData.about.paragraph3}</p>}
+          </div>
+        </SectionWrapper>
+      </div>
 
-      <SectionWrapper title="What I Do" className="mt-12">
-        <WhatIDoSection />
-      </SectionWrapper>
+      {/* What I Do Section with Glassmorphism */}
+      <div className="glass-card p-6 md:p-8">
+        <SectionWrapper title="What I Do" className="py-0">
+          <WhatIDoSection />
+        </SectionWrapper>
+      </div>
     </div>
   );
 }
