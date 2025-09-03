@@ -30,7 +30,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-          themes={['day', 'evening', 'dark']}
+          themes={['dark', 'purple']}
         >
           <ClientOnlyLoading />
           <AppLayout>{children}</AppLayout>
