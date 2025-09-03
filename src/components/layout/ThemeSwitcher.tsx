@@ -1,7 +1,8 @@
+
 "use client"
 
 import * as React from "react"
-import { Moon, Sun, Sunset } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
@@ -13,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export function ThemeSwitcher() {
-  const { setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
 
   return (
     <DropdownMenu>
@@ -26,16 +27,13 @@ export function ThemeSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("day")}>
-          <Sun className="mr-2 h-4 w-4" />
-          <span>Day</span>
+          Day
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("evening")}>
-          <Sunset className="mr-2 h-4 w-4" />
-          <span>Evening</span>
+          Evening
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
+          Dark
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
