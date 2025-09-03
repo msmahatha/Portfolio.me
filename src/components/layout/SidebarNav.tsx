@@ -85,7 +85,16 @@ export default function SidebarNav() {
               <X className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
             </Link>
             <Link href={profileData.social.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode" title="LeetCode">
-              <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6 text-foreground hover:text-accent transition-colors"
+                fill="currentColor"
+              >
+                <title>LeetCode</title>
+                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 5.858l5.706 5.706 5.706-5.706L14.444.438A1.374 1.374 0 0 0 13.483 0zm-2.944 6.292L5.132 11.7l5.407 5.407 5.407-5.407-5.407-5.407zm9.325 5.407L14.457 17.1l5.407 5.407 5.407-5.407-5.407-5.407zM0 22.626a1.374 1.374 0 0 0 .961.438l5.407-5.407-5.407-5.407L.438 21.665a1.374 1.374 0 0 0 .523.961z" />
+              </svg>
             </Link>
             <Link href={profileData.social.geeksforgeeks} target="_blank" rel="noopener noreferrer" aria-label="GeeksforGeeks" title="GeeksforGeeks">
               <Code2 className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
