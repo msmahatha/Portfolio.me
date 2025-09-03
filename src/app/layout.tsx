@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google'; // Corrected import for Geist
 import './globals.css';
 import AppLayout from '@/components/layout/AppLayout';
-import ClientOnlyLoading from '@/components/layout/ClientOnlyLoading';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
 
 const geistSans = Geist({ // Using default Geist (sans-serif)
@@ -31,7 +30,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClientOnlyLoading />
           <AppLayout>{children}</AppLayout>
         </ThemeProvider>
       </body>

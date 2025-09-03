@@ -9,7 +9,7 @@ const LoadingScreen = dynamic(() => import('../shared/LoadingScreen'), {
 });
 
 interface ClientOnlyLoadingProps {
-  onFinished: () => void;
+  onFinished?: () => void;
 }
 
 const ClientOnlyLoading = ({ onFinished }: ClientOnlyLoadingProps) => {
@@ -20,7 +20,7 @@ const ClientOnlyLoading = ({ onFinished }: ClientOnlyLoadingProps) => {
     setIsMounted(true);
 
     const finishTimer = setTimeout(() => {
-      onFinished();
+      onFinished?.();
     }, 1800); // Should be slightly less than hide timer
 
     const hideTimer = setTimeout(() => {

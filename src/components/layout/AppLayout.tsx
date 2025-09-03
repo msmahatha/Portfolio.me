@@ -32,26 +32,22 @@ export default function AppLayout({ children }: AppLayoutProps) {
       <div className={cn("transition-opacity duration-500", !isMounted || isLoading ? "opacity-0" : "opacity-100")}>
         <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
           <div className="flex min-h-screen relative">
-            {isMounted && (
-              <>
-                <Waves
-                  lineColor="hsl(var(--accent))"
-                  backgroundColor="transparent"
-                  waveSpeedX={0.02}
-                  waveSpeedY={0.01}
-                  waveAmpX={40}
-                  waveAmpY={20}
-                  friction={0.9}
-                  tension={0.01}
-                  maxCursorMove={120}
-                  xGap={12}
-                  yGap={36}
-                />
-                <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10">
-                  <SidebarNav />
-                </Sidebar>
-              </>
-            )}
+            <Waves
+              lineColor="hsl(var(--accent))"
+              backgroundColor="transparent"
+              waveSpeedX={0.02}
+              waveSpeedY={0.01}
+              waveAmpX={40}
+              waveAmpY={20}
+              friction={0.9}
+              tension={0.01}
+              maxCursorMove={120}
+              xGap={12}
+              yGap={36}
+            />
+            <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10">
+              <SidebarNav />
+            </Sidebar>
             
             <SidebarInset className="flex flex-col flex-1 z-10">
               <HeaderNav />
@@ -62,7 +58,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               </main>
             </SidebarInset>
           </div>
-          {isMounted && <MobileBottomNav className="z-10" />}
+          <MobileBottomNav className="z-10" />
           <Toaster />
         </SidebarProvider>
       </div>
