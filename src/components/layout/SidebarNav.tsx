@@ -90,7 +90,7 @@ export default function SidebarNav() {
             </Link>
             {profileData.social.codeforces && (
               <Link href={profileData.social.codeforces} target="_blank" rel="noopener noreferrer" aria-label="Codeforces" title="Codeforces">
-                <IconComponent name="codeforces" className="w-6 h-6 text-foreground hover:text-accent transition-colors" />
+                <IconComponent name="codeforces" className="w-6 h-6 hover:opacity-80 transition-opacity" />
               </Link>
             )}
           </div>
