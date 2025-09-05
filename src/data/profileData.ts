@@ -44,6 +44,17 @@ export const profileData: ProfileData = {
   ],
   projects: [
     {
+      name: "YouTube → Spotify Playlist Converter",
+      period: "May 2025 – Aug 2025",
+      tech: "Java, Spring Boot, Spotify API, YouTube API",
+      highlights: [
+        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
+      ],
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxZb3VUdWJlJTIwU3BvdGlmeXxlbnwwfHx8fDE3NTM2MDAxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      dataAiHint: "music api",
+      link: "https://github.com/msmahatha/youtube-spotify-playlist-converter"
+    },
+    {
       name: "Agrokart",
       period: "Jul 2024 - Present",
       tech: "Next.js, TypeScript, Tailwind CSS, Firebase",
@@ -230,5 +241,3 @@ export const profileData: ProfileData = {
     codeforces: "https://codeforces.com/profile/msmahatha007"
   }
 };
-
-    
