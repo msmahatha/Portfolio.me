@@ -7,6 +7,7 @@ import { profileData } from '@/data/profileData';
 import SectionWrapper from '@/components/shared/SectionWrapper';
 import ProjectCard from '@/components/shared/ProjectCard';
 import TypingEffect from '@/components/shared/TypingEffect';
+import { useIsMounted } from '@/hooks/useIsMounted';
 
 const allTechs = Array.from(new Set(profileData.projects.flatMap(p => p.tech.split(',').map(t => t.trim()))));
 const featuredFilters = ['All', 'Next.js', 'Python', 'AI/ML', 'Firebase', 'TypeScript'];
@@ -16,6 +17,7 @@ const filters = featuredFilters.filter(f => f === 'All' || allTechs.includes(f))
 
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const isMounted = useIsMounted();
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === 'All') {
@@ -25,6 +27,10 @@ export default function PortfolioPage() {
       project.tech.split(',').map(t => t.trim()).includes(activeFilter)
     );
   }, [activeFilter]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className="glass-card p-6 md:p-8">
@@ -52,14 +58,14 @@ export default function PortfolioPage() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence>
-            {filteredProjects.map((project, i) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.name}
                 layout
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
+                transition={{ duration: 0.3, delay: 0.05 }}
               >
                 <ProjectCard project={project} />
               </motion.div>
