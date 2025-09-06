@@ -71,6 +71,17 @@ export const profileData: ProfileData = {
       liveLink: "https://2danimator.netlify.app/"
     },
     {
+      name: "YouTube → Spotify Playlist Converter",
+      period: "May 2025 – Aug 2025",
+      tech: "Java, Spring Boot, Spotify API, YouTube API",
+      highlights: [
+        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
+      ],
+      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
+      dataAiHint: "youtube spotify",
+      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
+    },
+    {
       name: "Website Cloner",
       period: "Jan 2025 - Present",
       tech: "Next.js, AI/ML, HTML, CSS, JavaScript, Tailwind CSS",
@@ -199,17 +210,6 @@ export const profileData: ProfileData = {
       image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8MTc1MzY1NzkyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "love calculator",
       liveLink: "https://love-calculator007.netlify.app/"
-    },
-    {
-      name: "YouTube → Spotify Playlist Converter",
-      period: "May 2025 – Aug 2025",
-      tech: "Java, Spring Boot, Spotify API, YouTube API",
-      highlights: [
-        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
-      ],
-      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
-      dataAiHint: "youtube spotify",
-      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
     }
   ],
   skills: {
