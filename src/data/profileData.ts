@@ -220,7 +220,7 @@ export const profileData: ProfileData = {
         "Built with React, TypeScript, and modern web technologies.",
         "Features real-time collaboration with enhanced functionality."
       ],
-      image: "https://images.unsplash.com/photo-1579226966632-24b52ab7ecec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZWJvYXJkfGVufDB8fHx8MTc2MDY2NzM5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://i.pinimg.com/736x/20/11/8c/20118ce1f723fe3f31e992f58c2279bd.jpg",
       dataAiHint: "whiteboard collaboration",
       link: "https://github.com/msmahatha/Whiteboard.git",
       liveLink: "https://whiteboardmsm.netlify.app"
