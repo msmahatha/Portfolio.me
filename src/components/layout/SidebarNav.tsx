@@ -17,7 +17,7 @@ export default function SidebarNav() {
       <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-2 group-data-[state=collapsed]:py-4 transition-all duration-300 ease-in-out">
         <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-10 group-data-[state=collapsed]:h-10 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-300 ease-in-out">
           <Image
-            src="https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png"
+            src="https://i.ibb.co/gbQNYrRv/Whats-App-Image-2025-03-08-at-22-15-53.jpg"
             alt={profileData.name}
             fill
             className="object-cover"

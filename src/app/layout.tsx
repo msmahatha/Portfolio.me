@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Madhusudan Mahatha',
   description: 'Personal portfolio of Madhusudan Mahatha, Full Stack Developer & AI/ML Specialist.',
   icons: {
-    icon: 'https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png',
+    icon: 'https://i.ibb.co/gbQNYrRv/Whats-App-Image-2025-03-08-at-22-15-53.jpg',
   },
 };
 
