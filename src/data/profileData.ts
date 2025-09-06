@@ -44,20 +44,6 @@ export const profileData: ProfileData = {
   ],
   projects: [
     {
-      name: "Whiteboard",
-      period: "Present",
-      tech: "React, TypeScript, Next.js, WebSockets, Tailwind CSS",
-      highlights: [
-        "A feature-rich, collaborative whiteboard application similar to Excalidraw.",
-        "Built with React, TypeScript, and modern web technologies.",
-        "Features real-time collaboration with enhanced functionality."
-      ],
-      image: "https://images.unsplash.com/photo-1579226966632-24b52ab7ecec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZWJvYXJkfGVufDB8fHx8MTc2MDY2NzM5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      dataAiHint: "whiteboard collaboration",
-      link: "https://github.com/msmahatha/Whiteboard.git",
-      liveLink: "https://whiteboardmsm.netlify.app"
-    },
-    {
       name: "Agrokart",
       period: "Jul 2024 - Present",
       tech: "Next.js, TypeScript, Tailwind CSS, Firebase",
@@ -69,17 +55,6 @@ export const profileData: ProfileData = {
       image: "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8YWdyaWN1bHR1cmV8ZW58MHx8fHwxNzU0MzMxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "agriculture market",
       liveLink: "https://agrokart.netlify.app/"
-    },
-    {
-      name: "YouTube → Spotify Playlist Converter",
-      period: "May 2025 – Aug 2025",
-      tech: "Java, Spring Boot, Spotify API, YouTube API",
-      highlights: [
-        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
-      ],
-      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
-      dataAiHint: "youtube spotify",
-      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
     },
     {
       name: "Cursor for 2D Animation",
@@ -96,6 +71,17 @@ export const profileData: ProfileData = {
       liveLink: "https://2danimator.netlify.app/"
     },
     {
+      name: "YouTube → Spotify Playlist Converter",
+      period: "May 2025 – Aug 2025",
+      tech: "Java, Spring Boot, Spotify API, YouTube API",
+      highlights: [
+        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
+      ],
+      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
+      dataAiHint: "youtube spotify",
+      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
+    },
+    {
       name: "Website Cloner",
       period: "Jan 2025 - Present",
       tech: "Next.js, AI/ML, HTML, CSS, JavaScript, Tailwind CSS",
@@ -105,7 +91,7 @@ export const profileData: ProfileData = {
         "Smart fetching strategies bypass common hurdles like CORS.",
         "A next-generation tool for developers, designers, and SEO analysts."
       ],
-      image: "https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8d2Vic2l0ZSUyMGJ1aWxkZXJ8ZW58MHx8fHwxNzU2Mjg4NzkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1669023414166-a4cc7c0fe1f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8d2Vic2l0ZSUyMGJ1aWxkZXJ8ZW58MHx8fHwxNzU2Mjg4NzkyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       dataAiHint: "website analytics",
       link: "https://github.com/msmahatha/Website-Creator.git",
       liveLink: "https://websitecreator007.netlify.app/"
@@ -144,7 +130,7 @@ export const profileData: ProfileData = {
         "Recommends movies using mood, weather, trends & socio-political data with 90% accuracy.",
         "Delivered dynamic filtering algorithms & interactive Flask UI."
       ],
-      image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3ZpZSUyMHJlY29tbWVuZGF0aW9ufGVufDB8fHx8MTc0NzI4OTYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb3ZpZSUyMHJlY29tbWVuZGF0aW9ufGVufDB8fHx8fDE3NDcyODk2MDV8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "movie cinema",
       link: "https://github.com/msmahatha/ambient-movie-for-you"
     },
@@ -181,7 +167,7 @@ export const profileData: ProfileData = {
         "Achieved a ROUGE score of 0.45 on benchmark datasets.",
         "Deployed as a simple web service using Flask."
       ],
-      image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8MTc0NzM3MjE2OHww&ixlib_rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8fDE3NDczNzIxNjh8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "text summary"
     },
     {
@@ -221,9 +207,23 @@ export const profileData: ProfileData = {
         "Analyzes message frequency, time patterns, emoji use, and conversational dynamics.",
         "Inspired by a viral reel to create a romantic and intelligent web app."
       ],
-      image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8MTc1MzY1NzkyN3ww&ixlib_rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8fDE3NTM2NTc5Mjd8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "love calculator",
       liveLink: "https://love-calculator007.netlify.app/"
+    },
+    {
+      name: "Whiteboard",
+      period: "Present",
+      tech: "React, TypeScript, Next.js, WebSockets, Tailwind CSS",
+      highlights: [
+        "A feature-rich, collaborative whiteboard application similar to Excalidraw.",
+        "Built with React, TypeScript, and modern web technologies.",
+        "Features real-time collaboration with enhanced functionality."
+      ],
+      image: "https://images.unsplash.com/photo-1579226966632-24b52ab7ecec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZWJvYXJkfGVufDB8fHx8MTc2MDY2NzM5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      dataAiHint: "whiteboard collaboration",
+      link: "https://github.com/msmahatha/Whiteboard.git",
+      liveLink: "https://whiteboardmsm.netlify.app"
     }
   ],
   skills: {
@@ -255,3 +255,5 @@ export const profileData: ProfileData = {
     codeforces: "https://codeforces.com/profile/msmahatha007"
   }
 };
+
+    
