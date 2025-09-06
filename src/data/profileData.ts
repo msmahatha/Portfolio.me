@@ -243,5 +243,3 @@ export const profileData: ProfileData = {
 };
 
     
-
-    
