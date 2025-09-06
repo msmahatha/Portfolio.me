@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Madhusudan Mahatha',
   description: 'Personal portfolio of Madhusudan Mahatha, Full Stack Developer & AI/ML Specialist.',
   icons: {
-    icon: 'https://i.ibb.co/gbQNYrRv/Whats-App-Image-2025-03-08-at-22-15-53.jpg',
+    icon: 'https://i.pinimg.com/736x/20/11/8c/20118ce1f723fe3f31e992f58c2279bd.jpg',
   },
 };
 
