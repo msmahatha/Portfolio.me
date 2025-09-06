@@ -6,7 +6,7 @@ const LeetCodeIcon = (props: LucideProps) => (
   <Code2 {...props} />
 );
 
-const CodeforcesIcon = (props: LucideProps) => (
+const CodeforcesIcon = ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -15,7 +15,7 @@ const CodeforcesIcon = (props: LucideProps) => (
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...props}
+      className={className}
     >
       <path d="M4.5 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" fill="#1F8ACB" stroke="none" />
       <path d="M9.5 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" fill="#1F8ACB" stroke="none" />
