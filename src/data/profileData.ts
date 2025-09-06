@@ -44,6 +44,20 @@ export const profileData: ProfileData = {
   ],
   projects: [
     {
+      name: "Whiteboard",
+      period: "Present",
+      tech: "React, TypeScript, Next.js, WebSockets, Tailwind CSS",
+      highlights: [
+        "A feature-rich, collaborative whiteboard application similar to Excalidraw.",
+        "Built with React, TypeScript, and modern web technologies.",
+        "Features real-time collaboration with enhanced functionality."
+      ],
+      image: "https://images.unsplash.com/photo-1579226966632-24b52ab7ecec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZWJvYXJkfGVufDB8fHx8MTc2MDY2NzM5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      dataAiHint: "whiteboard collaboration",
+      link: "https://github.com/msmahatha/Whiteboard.git",
+      liveLink: "https://whiteboardmsm.netlify.app"
+    },
+    {
       name: "Agrokart",
       period: "Jul 2024 - Present",
       tech: "Next.js, TypeScript, Tailwind CSS, Firebase",
@@ -55,6 +69,17 @@ export const profileData: ProfileData = {
       image: "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8YWdyaWN1bHR1cmV8ZW58MHx8fHwxNzU0MzMxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       dataAiHint: "agriculture market",
       liveLink: "https://agrokart.netlify.app/"
+    },
+    {
+      name: "YouTube → Spotify Playlist Converter",
+      period: "May 2025 – Aug 2025",
+      tech: "Java, Spring Boot, Spotify API, YouTube API",
+      highlights: [
+        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
+      ],
+      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
+      dataAiHint: "youtube spotify",
+      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
     },
     {
       name: "Cursor for 2D Animation",
@@ -69,17 +94,6 @@ export const profileData: ProfileData = {
       dataAiHint: "animation code",
       link: "https://github.com/msmahatha/Cursor-for-2d-animation",
       liveLink: "https://2danimator.netlify.app/"
-    },
-    {
-      name: "YouTube → Spotify Playlist Converter",
-      period: "May 2025 – Aug 2025",
-      tech: "Java, Spring Boot, Spotify API, YouTube API",
-      highlights: [
-        "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
-      ],
-      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
-      dataAiHint: "youtube spotify",
-      link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
     },
     {
       name: "Website Cloner",
@@ -142,7 +156,7 @@ export const profileData: ProfileData = {
         "Locally deployed multimodal comic generator with real-time editing.",
         "Optimised for Intel-based edge devices, reducing latency by 35%."
       ],
-      image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21pY2Jvb2t8ZW58MHx8fHwxNzQ3MjkxOTA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb21pY2Jvb2t8ZW58MHx8fHwxNzQ3MjkxOTA3fDA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "comic art",
       link: "https://github.com/msmahatha/ComicCrafter-AI"
     },
@@ -155,7 +169,7 @@ export const profileData: ProfileData = {
         "Achieved 95% accuracy in identifying individuals in varied lighting conditions.",
         "Integrated a web interface for real-time attendance monitoring and report generation."
       ],
-      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8c2Nob29sJTIwYXR0ZW5kZW5jZXxlbnwwfHx8fDE3NDczNzA1MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8c2Nob29sJTIwYXR0ZW5kZW5jZXxlbnwwfHx8fDE3NDczNzA1MjN8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "face recognition"
     },
     {
@@ -167,7 +181,7 @@ export const profileData: ProfileData = {
         "Achieved a ROUGE score of 0.45 on benchmark datasets.",
         "Deployed as a simple web service using Flask."
       ],
-      image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8MTc0NzM3MjE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1739805591936-39f03383c9a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8YWklMjBzdW1tYXJ5fGVufDB8fHx8MTc0NzM3MjE2OHww&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "text summary"
     },
     {
@@ -180,7 +194,7 @@ export const profileData: ProfileData = {
         "Achieved 80% accuracy in identifying misleading content from various sources.",
         "Implemented a user-friendly interface for submitting claims and viewing results."
       ],
-      image: "https://images.unsplash.com/photo-1585995603666-5bd6b348de9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWtlJTIwbmV3c3xlbnwwfHx8fDE3NDc3MzA3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1585995603666-5bd6b348de9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWtlJTIwbmV3c3xlbnwwfHx8fDE3NDc3MzA3ODd8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "fact check",
       link: "https://github.com/msmahatha/TruthGuard"
     },
@@ -194,7 +208,7 @@ export const profileData: ProfileData = {
         "Manage your games and uploaded files from a personal dashboard.",
         "Clean, responsive design, optimized for desktops, tablets, and mobile devices."
       ],
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzc3xlbnwwfHx8fDE3NTM2MDAxNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGVzc3xlbnwwfHx8fDE3NTM2MDAxNzd8MA&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "chess game",
       liveLink: "https://whimsical-peony-823e6d.netlify.app/"
     },
@@ -207,7 +221,7 @@ export const profileData: ProfileData = {
         "Analyzes message frequency, time patterns, emoji use, and conversational dynamics.",
         "Inspired by a viral reel to create a romantic and intelligent web app."
       ],
-      image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8MTc1MzY1NzkyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1516980907201-943c13a8d03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb3ZlfGVufDB8fHx8MTc1MzY1NzkyN3ww&ixlib_rb-4.1.0&q=80&w=1080",
       dataAiHint: "love calculator",
       liveLink: "https://love-calculator007.netlify.app/"
     }
@@ -241,5 +255,3 @@ export const profileData: ProfileData = {
     codeforces: "https://codeforces.com/profile/msmahatha007"
   }
 };
-
-    
