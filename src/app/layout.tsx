@@ -2,16 +2,13 @@
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google'; // Corrected import for Geist
 import './globals.css';
-import AppLayout from '@/components/layout/AppLayout';
 import { ThemeProvider } from '@/components/layout/ThemeProvider';
-import ClientOnlyLoading from '@/components/layout/ClientOnlyLoading';
-import PageTransition from '@/components/layout/PageTransition';
+import ClientOnlyLayout from '@/components/layout/ClientOnlyLayout';
 
 const geistSans = Geist({ // Using default Geist (sans-serif)
   variable: '--font-geist-sans',
   subsets: ['latin'],
 });
-
 
 export const metadata: Metadata = {
   title: 'Madhusudan Mahatha',
@@ -36,12 +33,9 @@ export default function RootLayout({
           disableTransitionOnChange
           themes={['dark', 'purple']}
         >
-          <ClientOnlyLoading />
-          <AppLayout>
-            <PageTransition>
-              {children}
-            </PageTransition>
-          </AppLayout>
+          <ClientOnlyLayout>
+            {children}
+          </ClientOnlyLayout>
         </ThemeProvider>
       </body>
     </html>

@@ -23,41 +23,38 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const isMounted = useIsMounted();
 
   return (
-    <>
-      {/* The loading screen is now primarily handled by ClientOnlyLoading in the root layout */}
-      <div className={cn("transition-opacity duration-500", isMounted ? "opacity-100" : "opacity-0")}>
-        <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
-          <div className="flex min-h-screen relative">
-            <Waves
-              lineColor="hsl(var(--accent))"
-              backgroundColor="transparent"
-              waveSpeedX={0.02}
-              waveSpeedY={0.01}
-              waveAmpX={40}
-              waveAmpY={20}
-              friction={0.9}
-              tension={0.01}
-              maxCursorMove={120}
-              xGap={12}
-              yGap={36}
-            />
-            <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10">
-              <SidebarNav />
-            </Sidebar>
-            
-            <SidebarInset className="flex flex-col flex-1 z-10">
-              <HeaderNav />
-              <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
-                <PageTransition>
-                  {children}
-                </PageTransition>
-              </main>
-            </SidebarInset>
-          </div>
-          <MobileBottomNav className="z-10" />
-          <Toaster />
-        </SidebarProvider>
-      </div>
-    </>
+    <div className={cn("transition-opacity duration-500", isMounted ? "opacity-100" : "opacity-0")}>
+      <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "var(--sidebar-width-custom)" } as React.CSSProperties}>
+        <div className="flex min-h-screen relative">
+          <Waves
+            lineColor="hsl(var(--accent))"
+            backgroundColor="transparent"
+            waveSpeedX={0.02}
+            waveSpeedY={0.01}
+            waveAmpX={40}
+            waveAmpY={20}
+            friction={0.9}
+            tension={0.01}
+            maxCursorMove={120}
+            xGap={12}
+            yGap={36}
+          />
+          <Sidebar side="left" variant="sidebar" collapsible="icon" className="shadow-lg z-10">
+            <SidebarNav />
+          </Sidebar>
+          
+          <SidebarInset className="flex flex-col flex-1 z-10">
+            <HeaderNav />
+            <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+              <PageTransition>
+                {children}
+              </PageTransition>
+            </main>
+          </SidebarInset>
+        </div>
+        <MobileBottomNav className="z-10" />
+        <Toaster />
+      </SidebarProvider>
+    </div>
   );
 }
