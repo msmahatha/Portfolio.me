@@ -207,7 +207,7 @@ export const profileData: ProfileData = {
       highlights: [
         "Built a REST API to convert YouTube playlists into Spotify playlists with OAuth2 authentication, async processing, and Swagger docs; deployed using Maven with Docker support."
       ],
-      image: "https://i.ibb.co/b3wJvCj/youtube-spotify.png",
+      image: "https://www.jumpstartmag.com/wp-content/uploads/2024/07/image-11.png",
       dataAiHint: "youtube spotify",
       link: "https://github.com/msmahatha/youtubePlaylistToSportifyPlaylist"
     }

@@ -34,6 +34,12 @@ const nextConfig: NextConfig = {
         hostname: 'i.ibb.co',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.jumpstartmag.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
