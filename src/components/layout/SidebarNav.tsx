@@ -17,7 +17,7 @@ export default function SidebarNav() {
       <SidebarHeader className="items-center text-center p-6 group-data-[state=collapsed]:px-2 group-data-[state=collapsed]:py-4 transition-all duration-300 ease-in-out">
         <div className="relative w-[140px] h-[140px] group-data-[state=collapsed]:w-10 group-data-[state=collapsed]:h-10 mb-4 group-data-[state=collapsed]:mb-0 rounded-full shadow-md overflow-hidden transition-all duration-300 ease-in-out">
           <Image
-            src="https://i.ibb.co/CFGFw2x/Whats-App-Image-2025-03-08-at-22-15-53.jpg"
+            src="https://i.pinimg.com/736x/20/11/8c/20118ce1f723fe3f31e992f58c2279bd.jpg"
             alt={profileData.name}
             fill
             className="object-cover"
