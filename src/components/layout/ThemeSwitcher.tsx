@@ -15,7 +15,8 @@ export function ThemeSwitcher() {
   const isMounted = useIsMounted()
 
   const cycleTheme = () => {
-    const currentThemeIndex = themes.indexOf(theme ?? '');
+    const currentTheme = theme ?? 'dark';
+    const currentThemeIndex = themes.indexOf(currentTheme);
     const nextThemeIndex = (currentThemeIndex + 1) % themes.length;
     setTheme(themes[nextThemeIndex] ?? 'dark');
   };
