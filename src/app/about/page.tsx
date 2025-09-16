@@ -8,8 +8,8 @@ import TypingEffect from '@/components/shared/TypingEffect';
 import ExpertiseSection from '@/components/features/ExpertiseSection';
 
 export const metadata: Metadata = {
-  title: 'About | Madhusudan Mahatha',
-  description: "Learn more about Madhusudan Mahatha, a Full Stack Developer specializing in applied Artificial Intelligence.",
+  title: 'About',
+  description: `Learn more about ${profileData.name}, a ${profileData.title}. Discover his skills, what he does, and his areas of expertise in web development and artificial intelligence.`,
 };
 
 export default function AboutPage() {

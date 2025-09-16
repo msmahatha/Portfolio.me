@@ -1,6 +1,7 @@
 
 'use client';
 
+import type { Metadata } from 'next';
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { profileData } from '@/data/profileData';
@@ -13,6 +14,11 @@ const allTechs = Array.from(new Set(profileData.projects.flatMap(p => p.tech.spl
 const featuredFilters = ['All', 'Next.js', 'Python', 'AI/ML', 'Firebase', 'TypeScript'];
 // You can customize the filters you want to show
 const filters = featuredFilters.filter(f => f === 'All' || allTechs.includes(f));
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description: `Explore the portfolio of ${profileData.name}. A collection of projects in web development, AI/ML, and more. See examples of work with Next.js, Python, Firebase, and other technologies.`,
+};
 
 
 export default function PortfolioPage() {

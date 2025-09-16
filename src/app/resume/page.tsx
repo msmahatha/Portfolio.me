@@ -7,8 +7,8 @@ import SkillBadge from '@/components/shared/SkillBadge';
 import TypingEffect from '@/components/shared/TypingEffect';
 
 export const metadata: Metadata = {
-  title: 'Resume | Madhusudan Mahatha',
-  description: 'View the resume of Madhusudan Mahatha, detailing work experience, education, projects, and skills.',
+  title: 'Resume',
+  description: `View the professional resume of ${profileData.name}. Details on work experience, education, skills in technologies like Next.js, Python, and AI/ML, and major projects.`,
 };
 
 export default function ResumePage() {
@@ -80,7 +80,7 @@ export default function ResumePage() {
           </div>
 
           {/* Certifications */}
-          <div className="glass-card p-6 md:p-8">
+          <div className="glass-card p-6 md-p-8">
             <h3 className="text-2xl font-semibold mb-4 text-accent">Certifications</h3>
             <ul className="list-disc list-inside space-y-2 text-foreground/80">
               {certifications.map((cert) => (
@@ -90,7 +90,7 @@ export default function ResumePage() {
           </div>
 
           {/* Extras */}
-          <div className="glass-card p-6 md:p-8">
+          <div className="glass-card p-6 md-p-8">
             <h3 className="text-2xl font-semibold mb-4 text-accent">Extras</h3>
             <ul className="list-disc list-inside space-y-2 text-foreground/80">
               {extras.map((extra) => (
