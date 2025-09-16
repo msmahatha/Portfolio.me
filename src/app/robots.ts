@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://msmahatha.com'; // Replace with your production domain
+  const baseUrl = 'https://madhusudanmahatha1.netlify.app'; // Replace with your production domain
 
   return {
     rules: [

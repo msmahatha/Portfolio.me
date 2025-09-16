@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 import { profileData } from '@/data/profileData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://msmahatha.com'; // Replace with your production domain
+  const baseUrl = 'https://madhusudanmahatha1.netlify.app'; // Replace with your production domain
 
   // Static pages
   const staticRoutes = ['/about', '/portfolio', '/resume'].map((route) => ({

@@ -16,7 +16,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: profileData.name,
-  url: 'https://msmahatha.com', // Replace with your actual domain
+  url: 'https://madhusudanmahatha1.netlify.app', // Replace with your actual domain
   image: 'https://i.ibb.co/gbQNYrRv/Whats-App-Image-2025-03-08-at-22-15-53.jpg',
   sameAs: [
     profileData.social.github,
@@ -31,13 +31,13 @@ const jsonLd = {
   },
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://msmahatha.com', // Replace with your actual domain
+    '@id': 'https://madhusudanmahatha1.netlify.app', // Replace with your actual domain
   },
 };
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://msmahatha.com'), // Replace with your production domain
+  metadataBase: new URL('https://madhusudanmahatha1.netlify.app'), // Replace with your production domain
   title: {
     default: `${profileData.name} | ${profileData.title}`,
     template: `%s | ${profileData.name}`,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: profileData.name,
     description: profileData.about.paragraph1,
-    url: 'https://msmahatha.com', // Replace with your production domain
+    url: 'https://madhusudanmahatha1.netlify.app', // Replace with your production domain
     siteName: profileData.name,
     images: [
       {
